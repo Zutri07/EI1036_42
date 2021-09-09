@@ -2,5 +2,6 @@
     "revealjs.slideNumber": true,
     "eslint.enable": false,
     "revealjs.slideExplorerEnabled": false,
-    "markdown.extension.toc.githubCompatibility": true
+    "markdown.extension.toc.githubCompatibility": true,
+    "github-enterprise.uri": "https://github.com/dllido/EI1036_42"
 }
