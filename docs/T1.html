@@ -45,68 +45,23 @@
 
             </div>
 		</div>
+		
+		<script src="../dist/reveal.js"></script>
+        <script src="../plugin/markdown/markdown.js"></script>
+        <script src="../plugin/highlight/highlight.js"></script>
+        <script src="../plugin/notes/notes.js"></script>
 
-		<script src="libs/reveal.js/dist/reveal.js"></script>
-		<script src="libs/reveal.js/plugin/markdown/markdown.js"></script>
-		<script src="libs/reveal.js/plugin/highlight/highlight.js"></script>
-		<script src="libs/reveal.js/plugin/notes/notes.js"></script>
-	<script>
-		Reveal.initialize({
-			  // The "normal" size of the presentation, aspect ratio will
-  // be preserved when the presentation is scaled to fit different
-  // resolutions. Can be specified using percentage units.
-  width: 960,
-  height: 700,
+		<script>
 
-  // Factor of the display size that should remain empty around
-  // the content
-  margin: 0.04,
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
 
-  // Bounds for smallest/largest possible scale to apply to content
-  minScale: 0.2,
-  maxScale: 2.0,
-			controls: true,
-			progress: true,
-			history: false,
-			center: true,
-			controls: true,
-controlsTutorial: true,
-controlsLayout: 'bottom-right',
-controlsBackArrows: 'faded',
-progress: true,
-slideNumber: true,
-keyboard: true,
-overview: true,
-touch: true,
-loop: false,
-rtl: false,
-shuffle: false,
-fragments: true,
-fragmentInURL: false,
-embedded: false,
-help: false,
-showNotes: false,
-autoPlayMedia: false,
-autoSlide: 0,
-autoSlideStoppable: true,
-autoSlideMethod: Reveal.navigateNext,
-defaultTiming: 120,
-mouseWheel: true,
-hideAddressBar: true,
-previewLinks: false,
-transition: 'default',
-transitionSpeed: 'default',
-backgroundTransition: 'default',
-viewDistance: 3,
-parallaxBackgroundImage: '',
-parallaxBackgroundSize: '',
-parallaxBackgroundHorizontal: 10,
-parallaxBackgroundVertical: 0,
-display: 'block',
-plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,title-footer ]
-		});
-	</script>
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
 
-      
+		</script>
 	</body>
 </html>
