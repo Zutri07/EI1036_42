@@ -53,11 +53,11 @@
 
 
 .reveal p {
-  line-height: 1.3;
+  line-height: 1.3em;
 }
 
 .reveal li{
-  line-height: 1.2;}
+  line-height: 1.2em;}
 .reveal h1 {
   font-size: 1.3em; 
   color: #83a;}
