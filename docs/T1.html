@@ -51,20 +51,7 @@
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 	<script>
-		eveal.initialize({
-  // The "normal" size of the presentation, aspect ratio will
-  // be preserved when the presentation is scaled to fit different
-  // resolutions. Can be specified using percentage units.
-  width: 960,
-  height: 700,
-
-  // Factor of the display size that should remain empty around
-  // the content
-  margin: 0.04,
-
-  // Bounds for smallest/largest possible scale to apply to content
-  minScale: 0.2,
-  maxScale: 2.0,
+		Reveal.initialize({
 			controls: true,
 			progress: true,
 			history: true,
@@ -105,7 +92,8 @@ parallaxBackgroundSize: '',
 parallaxBackgroundHorizontal: 10,
 parallaxBackgroundVertical: 0,
 display: 'block',
-plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, title-footer]
+
+			plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 		});
 	</script>
 
