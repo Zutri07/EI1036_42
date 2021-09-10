@@ -11,7 +11,9 @@
       font-size: 0.66em;
   }
 }
-
+.reveal .progress {
+  height: 13px;
+} 
 /*
 .reveal li{margin-left:5px}
 .reveal table{font-size: 0.5 em;line-height: 0.8em;}
