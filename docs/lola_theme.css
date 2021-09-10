@@ -11,6 +11,9 @@
       font-size: 0.66em;
   }
 }
+.reveal {  font-size: 20px;
+
+}
 .reveal .progress {
   height: 13px;
 } 
