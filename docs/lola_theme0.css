@@ -3,15 +3,19 @@
 @media screen and (max-width: 900px), (max-height: 600px) {
   .reveal .slides {
       font-size: 0.82em;
+      padding: 10px 0;
   }
 }
 
 @media screen and (max-width: 700px), (max-height: 400px) {
   .reveal .slides {
       font-size: 0.66em;
+      padding: 10px 0;
   }
 }
-
+.reveal .progress {
+  height: 15px;
+} 
 /**
  *Mis fuentes más pequeñas*/
  .reveal .slide-number {
