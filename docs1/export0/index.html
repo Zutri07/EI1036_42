@@ -13,94 +13,90 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- REVEAL CSS-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="libs/reveal.js/dist/reset.css">
-  <link rel="stylesheet" href="libs/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="libs/reveal.js/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="libs/reveal.js/3.8.0/css/reveal.css">
   
-  <link rel="stylesheet" href="libs/reveal.js/dist/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="libs/reveal.js/3.8.0/css/theme/sky.css" id="theme">
   
   
-  <!--
-  <link rel="stylesheet" href="libs/reveal.js/plugin/title-footer/title-footer-mod.css" />
-  -->
+  <link rel="stylesheet" href="libs/reveal.js/3.8.0/plugin/title-footer/title-footer-mod.css" />
 
   <!-- MERMAID-->
-  <!--
-  <script src="libs/reveal.js/plugin/mermaid/mermaid.min.js"></script>
+  <script src="libs/reveal.js/3.8.0/plugin/mermaid/mermaid.min.js"></script>
   <style>
   .mermaid {
     font-size: 0.5em;
   }
   </style>
-  -->
-  
+
   <style>
     [class*=task-list-item] {
-      min-height: 22px;
-      margin-top: 6px!important;
-      margin-bottom: 6px!important;
-      padding-left: 0;
-      list-style: none;
-    }
+    min-height: 22px;
+    margin-top: 6px!important;
+    margin-bottom: 6px!important;
+    padding-left: 0;
+    list-style: none;
+}
 
-    [class*=task-list-item]>input:first-child {
-      position: absolute!important;
-      opacity: 0;
-      margin: 0;
-    }
+[class*=task-list-item]>input:first-child {
+    position: absolute!important;
+    opacity: 0;
+    margin: 0;
+}
+[class*=task-list-item]>label {
+    padding-left: 29px!important;
+    min-height: 22px;
+    line-height: 22px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
 
-    [class*=task-list-item]>label {
-      padding-left: 29px!important;
-      min-height: 22px;
-      line-height: 22px;
-      display: inline-block;
-      position: relative;
-      vertical-align: top;
-      margin-bottom: 0;
-      font-weight: 400;
-      cursor: pointer;
-    }
+.task-list-item>input:first-child:checked+input[type=hidden]+label::before, .task-list-item>input:first-child:checked+label::before {
+    background-color: #ecf0f1;
+    border-color: #ecf0f1;
+}
 
-    .task-list-item>input:first-child:checked+input[type=hidden]+label::before, .task-list-item>input:first-child:checked+label::before {
-      background-color: #ecf0f1;
-      border-color: #ecf0f1;
-    }
+[class*=task-list-item]>input:first-child+input[type=hidden]+label::before, [class*=task-list-item]>input:first-child+label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #D3CFC8;
+    border-radius: 0;
+    margin-left: -29px;
+}
 
-    [class*=task-list-item]>input:first-child+input[type=hidden]+label::before, [class*=task-list-item]>input:first-child+label::before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      border: 1px solid #D3CFC8;
-      border-radius: 0;
-      margin-left: -29px;
-    }
 
-    [class*=task-list-item]>input:first-child:checked+input[type=hidden]+label::after, [class*=task-list-item]>input:first-child:checked+label::after {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 7px;
-      height: 10px;
-      border: 2px solid #fff;
-      border-left: none;
-      border-top: none;
-      transform: translate(7.75px,4.5px) rotate(45deg);
-      -ms-transform: translate(7.75px,4.5px) rotate(45deg);
-    }
+[class*=task-list-item]>input:first-child:checked+input[type=hidden]+label::after, [class*=task-list-item]>input:first-child:checked+label::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-left: none;
+    border-top: none;
+    transform: translate(7.75px,4.5px) rotate(45deg);
+    -ms-transform: translate(7.75px,4.5px) rotate(45deg);
+}
 
-    .task-list-item>input:first-child:checked+input[type=hidden]+label::after, .task-list-item>input:first-child:checked+label::after {
-      border-bottom-color: #95a5a6;
-      border-right-color: #95a5a6;
-    }
+
+.task-list-item>input:first-child:checked+input[type=hidden]+label::after, .task-list-item>input:first-child:checked+label::after {
+    border-bottom-color: #95a5a6;
+    border-right-color: #95a5a6;
+}
   </style>
 
   <!-- Theme used for syntax highlighting of code -->
   
-  <link rel="stylesheet" href="libs/reveal.js/plugin/highlight/Monokai.css">
+  <link rel="stylesheet" href="libs/highlight.js/9.12.0/Monokai.css">
   
 
   
@@ -110,19 +106,96 @@
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match(/print-pdf/gi) ? 'libs/reveal.js/dist/print/pdf.css' : 'libs/reveal.js/dist/print/paper.css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'libs/reveal.js/3.8.0/css/print/pdf.css' : 'libs/reveal.js/3.8.0/css/print/paper.css';
     document.getElementsByTagName('head')[0].appendChild(link);
   </script>
 
   <style>
+    /* Solarized Light theme */
      .line {
       display: block;
-    }   
+    }
+    
 
     .line.focus {
       background: #fdf6e3;
       color: #657b83;
     }
+
+/*
+    .line.focus .hljs-comment,
+    .line.focus .hljs-quote {
+      color: #93a1a1;
+    }
+
+    .line.focus .hljs-keyword,
+    .line.focus .hljs-selector-tag,
+    .line.focus .hljs-addition {
+      color: #859900;
+    }
+
+    .line.focus .hljs-number,
+    .line.focus .hljs-string,
+    .line.focus .hljs-meta .hljs-meta-string,
+    .line.focus .hljs-literal,
+    .line.focus .hljs-doctag,
+    .line.focus .hljs-regexp {
+      color: #2aa198;
+    }
+
+    .line.focus .hljs-title,
+    .line.focus .hljs-section,
+    .line.focus .hljs-name,
+    .line.focus .hljs-selector-id,
+    .line.focus .hljs-selector-class {
+      color: #268bd2;
+    }
+
+    .line.focus .hljs-attribute,
+    .line.focus .hljs-attr,
+    .line.focus .hljs-variable,
+    .line.focus .hljs-template-variable,
+    .line.focus .hljs-class .hljs-title,
+    .line.focus .hljs-type {
+      color: #b58900;
+    }
+
+    .line.focus .hljs-symbol,
+    .line.focus .hljs-bullet,
+    .line.focus .hljs-subst,
+    .line.focus .hljs-meta,
+    .line.focus .hljs-meta .hljs-keyword,
+    .line.focus .hljs-selector-attr,
+    .line.focus .hljs-selector-pseudo,
+    .line.focus .hljs-link {
+      color: #cb4b16;
+    }
+
+    .line.focus .hljs-built_in,
+    .line.focus .hljs-deletion {
+      color: #dc322f;
+    }
+
+    .line.focus .hljs-formula {
+      background: #eee8d5;
+    }
+
+    .line.focus .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .line.focus .hljs-strong {
+      font-weight: bold;
+    }
+
+    .yellow-slide .line.focus:nth-child(2) {
+      background: yellow;
+    }
+
+    .reveal .slides section .code-presenting-annotation {
+      font-size: 70%;
+    }
+    */
 
     .reveal .slides section .fragment.current-only {
       visibility: visible;
@@ -133,9 +206,32 @@
       display: block;
     }
 
+/*
+    .line {
+      display: block;
+    }
+*/
     .line.focus {
        opacity: 1.0;
     } 
+
+    /* .hljs {
+      background: none;
+    } */
+
+    /* .reveal pre {
+      width: 98%;
+      margin: 0px;
+      box-shadow: none;
+    }
+
+    .reveal pre code {
+      font-size: 1.2em;
+      line-height: 1.2;
+      border-radius: 10px;
+      max-height: 60vh !important;
+      overflow: hidden !important;
+    } */
 
     @media (device-width: 100vw) and (device-height: 100vh) {
       .reveal pre code {
@@ -174,814 +270,600 @@
     <div class="slides">
 
       
-  
-    <section >
-      <link rel="stylesheet" href="lola_theme.css">
-# TEMA 1
-<h2><a id="user-content-introducción-a-la-www" class="anchor" href="#introducción-a-la-www" aria-hidden="true"></a>Introducción a la WWW</h2>
-<h4><a id="user-content-ei1042---tecnologías-y-aplicaciones-web" class="anchor" href="#ei1042---tecnologías-y-aplicaciones-web" aria-hidden="true"></a>EI1042 - Tecnologías y Aplicaciones Web</h4>
-<h4><a id="user-content-ei1036--tecnologías-web-para-los-sistemas-de-información-20212022" class="anchor" href="#ei1036--tecnologías-web-para-los-sistemas-de-información-20212022" aria-hidden="true"></a>EI1036- Tecnologías Web para los Sistemas de Información (2021/2022)</h4>
+
+
+    
+        <section >
+            
+            <link rel="stylesheet" href="lola_theme0.css">   
+<h1><a id="user-content-tema-2-introducción-al-php" class="anchor" href="#tema-2-introducción-al-php" aria-hidden="true"></a>Tema 2: Introducción al PHP</h1>
+<h3><a id="user-content-ei1042---tecnologías-y-aplicaciones-web" class="anchor" href="#ei1042---tecnologías-y-aplicaciones-web" aria-hidden="true"></a>EI1042 - Tecnologías y Aplicaciones Web</h3>
+<p><strong>EI1036- Tecnologías Web para los Sistemas de Información (2020/2021)</strong></p>
 <h5><a id="user-content-profesorado-dra-dolores-maría-llidó-escrivá" class="anchor" href="#profesorado-dra-dolores-maría-llidó-escrivá" aria-hidden="true"></a>Profesorado: Dra. Dolores María Llidó Escrivá</h5>
 <p><img src="./media/cc2.jpg" alt="Derechos Autor"></p>
 <p><a href="https://www.uji.es/">Universitat Jaume I</a>.</p>
 
-    </section>
-  
+            </section>
+    
 
-  
-    <section >
-      <h2><a id="user-content-tabla-de-contenidos" class="anchor" href="#tabla-de-contenidos" aria-hidden="true"></a>Tabla de contenidos</h2>
+
+
+    
+        <section >
+            
+            <h2><a id="user-content-índice" class="anchor" href="#índice" aria-hidden="true"></a>Índice</h2>
 <ul>
-<li>
-<p>Introducción Wordpress</p>
-</li>
-<li>
-<p>Conceptos de Wordpress</p>
-</li>
-<li>
-<p>Escritorio principal</p>
-</li>
-<li>
-<p>WP CORE FILES</p>
-</li>
-<li>
-<p>Arquitectura cliente servidor Web</p>
-</li>
-<li>
-<p>Localitzación de recursos: URL</p>
-</li>
-<li>
-<p>Clientes Web</p>
-</li>
-<li>
-<p>Servidores Web</p>
-</li>
-<li>
-<p>El protocolo HTTP</p>
-</li>
-<li>
-<p>Proceso de producción del portal web</p>
-</li>
-<li>
-<p>Definición un proyecto Web</p>
-</li>
-<li>
-<p>Servidor web con PHP.</p>
-</li>
-<li>
-<p>Configuración Apache:.htaccess</p>
-</li>
+<li>Introducción a PHP</li>
+<li>Sintaxis básica</li>
+<li>Tipos de datos</li>
+<li>Salida Estándar</li>
+<li>Variables Expresiones y Operadores</li>
+<li>Formularios</li>
+<li>Funciones</li>
 </ul>
 
-    </section>
-  
+            </section>
+    
 
-  
+
+
+    
+        <section >
+            
+            <h1><a id="user-content-1-introducción-al-php" class="anchor" href="#1-introducción-al-php" aria-hidden="true"></a>1. Introducción al PHP</h1>
+<ul>
+<li>Creado por Rasmus Lerdorf para uso personal en 1994 <img src="./media/T2/rasmus.jpeg" alt="Image of Rasmus"></li>
+<li>PHP es un lenguaje de script del lado del servidor.</li>
+<li>PHP: Hypertext Preprocessor</li>
+<li>Versión actual: PHP 7</li>
+<li>Es potente, fácil de aprender, de libre
+distribución, permite el acceso a bases de datos y otras
+funcionalidades orientadas a la red</li>
+<li>Dispone de abundante soporte en la Web</li>
+</ul>
+<p>Manual PHP: <a href="http://php.net/manual/es/">http://php.net/manual/es/</a></p>
+
+            </section>
+    
+
+
+
+    
     <section>
-      <section >
-        <h1><a id="user-content-1-wordpress-wp" class="anchor" href="#1-wordpress-wp" aria-hidden="true"></a>1. WordPress (WP)</h1>
-<p>Es un gestor de contenidos web (Content Manager System -CMS-). Especialmente dirigido a:</p>
+        <section >
+            <h2><a id="user-content-ficheros-con-php" class="anchor" href="#ficheros-con-php" aria-hidden="true"></a>Ficheros con PHP</h2>
 <ul>
-<li>Sitio web (<a href="https://www.webempresa.com/">https://www.webempresa.com/</a>)</li>
-<li>Blogs (<a href="http://www.dulceida.com/">http://www.dulceida.com/</a>)</li>
-<li>Combinaciones web/blog</li>
+<li>Fichero PHP:  hola.php</li>
 </ul>
-<p>También permite añadir nuevas funcionalidades mediante la definición de temas y plugins.</p>
+<pre><code class="language-PHP">&lt;?php 
+echo &quot;Hola Mundo&quot;;
+?&gt;
+</code></pre>
 <ul>
-<li><a href="http://wordpress.org">wordpress.org</a>: para descargar WP para instalarlo en nuestros servidores o en local</li>
-<li><a href="http://wordpress.com">wordpress.com</a>: para obtener hosting con WP</li>
+<li>Fichero con HTML: bienvenido.php</li>
+</ul>
+<pre><code class="language-HTML">&lt;body&gt;
+&lt;p&gt;Inicio&lt;/p&gt;
+&lt;?php 
+$nombre = &quot;Ana&quot;;
+print(&quot; &lt;P&gt;Hola, $nombre&lt;/P&gt;&quot;); 
+ ?&gt;
+&lt;p&gt;Fin&lt;/p&gt;
+</code></pre>
+
+            </section>
+        
+            <section >
+                <h2><a id="user-content-páginas-web-dinámicas-con-php" class="anchor" href="#páginas-web-dinámicas-con-php" aria-hidden="true"></a>Páginas web dinámicas con PHP</h2>
+<ul>
+<li>El cliente no ve el código PHP sino los resultados que produce en la salida estándar.</li>
+<li>Apache ejecuta php no como un <a href="https://httpd.apache.org/docs/trunk/es/howto/cgi.html">CGI</a> sino como un módulo.</li>
+</ul>
+<p>Version php  S.O. != Apache</p>
+<p><img src="./media/T2/image1.png" alt="Image of La World Wide Web"></p>
+<p>Seguridad: Ficheros sensibles deben estar fuera de la raíz (o docroot) del servidor web.</p>
+
+            </section>
+        
+            <section >
+                <h3><a id="user-content-ejercicio-1" class="anchor" href="#ejercicio-1" aria-hidden="true"></a>Ejercicio 1</h3>
+<p><a href="https://asociacionpiruleta.cloudaccess.host/PHP/Lab/P1/includes/portal.php?action=listar">https://asociacionpiruleta.cloudaccess.host/PHP/Lab/P1/includes/portal.php?action=listar</a></p>
+<p>Analiza la URL.</p>
+<ul>
+<li>¿Cual es el nombre servidor?</li>
+<li>¿Cual es el recurso?</li>
+<li>¿Que parametros requiere el programa php?</li>
 </ul>
 
-      </section>
-      
-        <section >
-          <h2><a id="user-content-cms-wordpress" class="anchor" href="#cms-wordpress" aria-hidden="true"></a>CMS WordPress</h2>
-<img src=./media/T4/WP-Architecture.jpg>
-https://www.slideshare.net/amikeliunas/introduction-to-wordpress-class-1
-        </section>
-      
-        <section >
-          <h2><a id="user-content-cuentas-requeridas-al-instalar-wordpress" class="anchor" href="#cuentas-requeridas-al-instalar-wordpress" aria-hidden="true"></a>Cuentas requeridas al instalar WordPress</h2>
-<ul>
-<li>
-<p>La cuenta del hosting:
-Sirve para acceder al hosting con FileZilla y para instalar WP.</p>
-</li>
-<li>
-<p>Cuenta en la base de datos de WP.</p>
-</li>
-<li>
-<p>Cuenta del super-administrador de tu instalación de WP.</p>
-</li>
-</ul>
+            </section>
+        
 
-        </section>
-      
     </section>
-  
+    
 
-  
+
+
+    
     <section>
-      <section >
-        <h1><a id="user-content-2-conceptos-básicos-del-cms" class="anchor" href="#2-conceptos-básicos-del-cms" aria-hidden="true"></a>2. Conceptos Básicos del CMS:</h1>
-<ul>
-<li>Tema</li>
-<li>Página</li>
-<li>Entrada de un blog (Post)</li>
-<li>Comentario a una entrada</li>
-<li>Categoría (grupos de posts/páginas)</li>
-<li>Etiqueta (palabras clave)</li>
-<li>Atajos (Shortcode)</li>
-<li>Plugin</li>
-<li>Widget</li>
-<li>Menu</li>
-</ul>
-<p><strong>Leer ↓</strong></p>
-
-      </section>
-      
         <section >
-          <h2><a id="user-content-lectura-individual" class="anchor" href="#lectura-individual" aria-hidden="true"></a>Lectura Individual</h2>
+            <h2><a id="user-content-ejecución-php" class="anchor" href="#ejecución-php" aria-hidden="true"></a>Ejecución PHP</h2>
+<p><a href="https://asociacionpiruleta.cloudaccess.host/PHP/T2/holaMundo.php">https://asociacionpiruleta.cloudaccess.host/PHP/T2/holaMundo.php</a></p>
 <ul>
-<li><em>Página</em>: Contenido sin dependencia (sitio web clásico).</li>
-<li><em>Entrada o artículo (post)</em>:  componente básica de contenido de un blog.</li>
-<li><em>Comentario</em>: textos breves asociados a una entrada escritos por terceras personas.</li>
-<li><em>Categoría</em>:  agrupamientos de contenido en WordPress. Admite la construcción de jerarquías (subcategorías).</li>
-<li><em>Etiqueta</em> (tags) palabras clave asociadas a páginas, artículos o entradas.</li>
-<li><em>Atajos</em> (shortcode): texto entre las marcas [ ] que se sustituyen por el resultado de una función PHP (ej.- [woocommerce_cart])</li>
+<li>Consola</li>
+</ul>
+<pre><code class="language-php">php.exe &quot;./bienvenidos.php&quot; 
+</code></pre>
+<ul>
+<li>Entorno php:</li>
+</ul>
+<pre><code class="language-php">&gt;&gt;php -a
+$hola=&quot;Adios&quot;;
+$echo $hola
+</code></pre>
+<p>-Servidor web local:</p>
+<pre><code class="language-php">php [options] -S &lt;addr&gt;:&lt;port&gt; [-t docroot]
+&gt;&gt; php -S localhost:8080
+</code></pre>
+
+            </section>
+        
+            <section >
+                <h3><a id="user-content-ejercicio-2" class="anchor" href="#ejercicio-2" aria-hidden="true"></a>Ejercicio 2</h3>
+<pre><code class="language-php">&gt;&gt;php -S localhost:8080
+</code></pre>
+<ul>
+<li>¿Cuál  es el docroot del servidor web?</li>
+<li>¿Dónde ponemos el fichero tutoPhp.php en el servidor para acceder desde <a href="http://localhost/teoria/T2/tutoPHP.php">http://localhost/teoria/T2/tutoPHP.php</a>?</li>
 </ul>
 
-        </section>
-      
-        <section >
-          <h2><a id="user-content-otros-elementos" class="anchor" href="#otros-elementos" aria-hidden="true"></a>Otros elementos</h2>
+            </section>
+        
+            <section >
+                <h3><a id="user-content-servidor-web-en-producción" class="anchor" href="#servidor-web-en-producción" aria-hidden="true"></a>Servidor WEB en Producción</h3>
 <ul>
-<li><em>Tema</em>: plantillas que se utilizan en WP para definir la apariencia y diseño del sitio.</li>
-<li><em>Plugin</em>: complementos de software que aumentan las capacidades y posibilidades de WP. Los plugins se usan para mejorar WP en diferentes áreas como marketing, redes sociales, seguridad, SEO, diseño web, contenido, tráfico web, etc.</li>
-<li><em>Widgets</em>: pequeños bloques con herramientas que realizan funciones específicas y que están pensados para ubicarse en ciertas áreas del tema en curso, como el pie o la barra lateral (sidebar). Ayudan a darte un mayor control sobre el diseño y contenido de tu sitio web o blog. Los widgets se pueden expandir y usar de diferente forma dependiendo del tema y de los plugins que se instalen.</li>
-<li><em>Menu</em>: Menús de navegación y acceso a distintos servicios del portal.</li>
+<li>Servidor web Apache (<a href="http://www.apache.org">http://www.apache.org</a>) con el módulo PHP (<a href="http://www.php.net">http://www.php.net</a>)</li>
+<li>Base de datos MySQL (<a href="http://www.mysql.com">http://www.mysql.com</a>) si se desea crear páginas dinámicas</li>
+<li>Herramientas para la gestión de MySQL, como PHPMyAdmin
+(<a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net</a>)</li>
 </ul>
-<p>Cualquier widget o menú creado en WP se muestra, por defecto, en todas las páginas del sitio web.</p>
+<p><a href="http://httpd.apache.org/docs/current/es/">Apache 2.3 http://httpd.apache.org/docs/current/es/</a></p>
 
-        </section>
-      
-        <section >
-          <h2><a id="user-content-categoríastaxonomías" class="anchor" href="#categoríastaxonomías" aria-hidden="true"></a>Categorías/Taxonomías</h2>
-<p>Las taxonomías de WP son un mecanismo de agrupamiento o categorización de los elementos de contenido y otros tipos de elementos de la aplicación.</p>
+            </section>
+        
+            <section >
+                <h2><a id="user-content-servidor-web--en-desarrollo-xampp" class="anchor" href="#servidor-web--en-desarrollo-xampp" aria-hidden="true"></a>Servidor WEB  en desarrollo: XAMPP</h2>
 <ul>
-<li><em>Categorías</em>: actúan a modo de contenedores semánticos que sirven para organizar temáticamente las entradas del sitio web. Son jerárquicas, lo cual supone que pueden existir categorías, subcategorías, sub-subcategorías, etc.</li>
-<li><em>Etiquetas</em>: descriptores semánticos del contenido de las entradas. No son jerárquicas (equivalente al glosario de palabras clave)</li>
-<li><em>Categorías de enlaces</em>: permiten categorizar los enlaces, de forma semejante a como lo hacen las categorías de entradas. Desde la versión 3.5, tanto los enlaces como las categorías de enlaces ya no son visibles en una instalación estándar de WP.</li>
-<li><em>Formatos de entradas</em>: sirven para agrupar ciertos metadatos de información de las entradas, que pueden ser utilizados por un tema a fin de personalizar su presentación.
-Las taxonomías contribuyen a jerarquizar el contenido y proporcionan “pistas” para que los buscadores puedan indexar los sitios web de forma eficiente.</li>
+<li>XAMPP es una distribución de Apache que incluye MySQL, PHP y  phpMyAdmin</li>
+<li>XAMPP es gratuito y fácil de instalar</li>
+<li>XAMPP es multiplataforma</li>
+<li>Precaución: la configuración por defecto  no es segura, ni para un entorno de producción.</li>
 </ul>
 
-        </section>
-      
-    </section>
-  
-
-  
-    <section >
-      <h1><a id="user-content-custom-fields-para-las-entradas-de-blogs" class="anchor" href="#custom-fields-para-las-entradas-de-blogs" aria-hidden="true"></a>Custom Fields para las entradas de Blogs</h1>
-<ul>
-<li>
-<p>Permite a los autores asignar campos personalizados a entradas de un blog (metadatos). Por ejemplo, el autor, el revisor, la fecha del post, etc.</p>
-</li>
-<li>
-<p>Los metadatos se manejan siempre como pares clave/valor.</p>
-</li>
-<li>
-<p>El administrador del blog puede utilizar campos existentes (plugins) o crear nuevos.</p>
-</li>
-</ul>
-<p>Después de escribir la entrada del blog, puedes acceder a sus metadatos desde el área “Custom Fields”. Estos datos serán accesibles desde PHP con una serie de funciones (the_meta(), get_post_custom(), get_post_meta(), get_post_custom_values(), etc.)</p>
+            </section>
+        
 
     </section>
-  
+    
 
-  
-    <section >
-      <h2><a id="user-content-¿cuestiones" class="anchor" href="#¿cuestiones" aria-hidden="true"></a>¿Cuestiones?</h2>
 
-    </section>
-  
 
-  
+    
     <section>
-      <section >
-        <h1><a id="user-content-3-frontend--backend" class="anchor" href="#3-frontend--backend" aria-hidden="true"></a>3. FrontEnd / Backend</h1>
-<img src="./media/T4/FrontBack.jpg">
-<p><strong>Leer ↓</strong></p>
-
-      </section>
-      
         <section >
-          <h2><a id="user-content-escritorio-principal-user-admin-" class="anchor" href="#escritorio-principal-user-admin-" aria-hidden="true"></a>Escritorio Principal (user:  <em>Admin</em>)</h2>
-<img src="./media/T4/escritorio.jpeg">
-        </section>
-      
+            <h1><a id="user-content-2-sintaxis-básica-php" class="anchor" href="#2-sintaxis-básica-php" aria-hidden="true"></a>2. Sintaxis básica PHP</h1>
+<ul>
+<li>PHP es sensible a mayúsculas/minúsculas <strong>solo para las variables</strong>.</li>
+<li>Las instrucciones se separan con “;”</li>
+<li>Espacios en blanco y cambios de línea no se tienen en cuenta.</li>
+<li>PHP interpreta entre comillas dobles pero no entre comillas
+simples.</li>
+<li>Se utiliza codificación UTF-8.</li>
+<li>Comprobar que el editor no ha generado un BOM ( <em>byte order mark</em> de unicode en la primera línea)</li>
+</ul>
+<p>Guia Estilos: <a href="https://www.php-fig.org/psr/psr-2/">https://www.php-fig.org/psr/psr-2/</a></p>
+
+            </section>
+        
+            <section >
+                <h3><a id="user-content-ejemplo-fichero-php" class="anchor" href="#ejemplo-fichero-php" aria-hidden="true"></a>Ejemplo fichero PHP</h3>
+<pre><code class="language-PHP">&lt;?php
+$var = &quot;test&quot;;
+echo &quot;$var&quot;; // Salida:&quot;test“
+echo &quot;\$var&quot;; // Salida:&quot; &quot;$var&quot;
+echo '$var'; // Salida:&quot; &quot;test&quot;
+# otro comentario hasta el final de la línea
+// este también es de línea
+/* comento
+varias líneas */
+?&gt;
+</code></pre>
+
+            </section>
+        
+            <section >
+                <h3><a id="user-content-usar-yodastyle" class="anchor" href="#usar-yodastyle" aria-hidden="true"></a>Usar: YodaStyle</h3>
+<p><img src="./media/T2/image2.png" alt="Image of La World Wide Web"></p>
+<p>Comparaciones  al revés  para evitar equivocarnos.</p>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
         <section >
-          <h2><a id="user-content-panel-de-control" class="anchor" href="#panel-de-control" aria-hidden="true"></a>Panel de control</h2>
+            
+            <h1><a id="user-content-3-tipos-de-datos" class="anchor" href="#3-tipos-de-datos" aria-hidden="true"></a>3. Tipos de datos</h1>
 <ul>
-<li>Configurar el portal (tipo site/blog).</li>
-<li>Seleccionar tema.</li>
-<li>Gestionar usuarios.</li>
-<li>Gestionar taxonomías.</li>
-<li>Gestionar plugins.</li>
-<li>Actualizaciones.</li>
-<li>Gestionar los distintos recursos del site: multimedia (imágenes, videos…).</li>
+<li>Tipos escalares: boolean, integer, double, string</li>
+<li>Tipos compuestos: array, object</li>
+<li>Tipos especiales: resource, NULL</li>
+<li>Las variables no declaradas se asocian a NULL y se imprimen como cadenas vacías.</li>
+<li>El tipo resource no lo veremos este curso por ser un tópico avanzado
+–</li>
 </ul>
-<p><strong>Leer ↓</strong></p>
+<h3><a id="user-content-array-asociativo" class="anchor" href="#array-asociativo" aria-hidden="true"></a>Array Asociativo</h3>
+<p>Sintaxis:
+array ([clave =&gt;] valor, …)</p>
+<pre><code class="language-PHP">$medidas = array (10, 25, 15);
+echo $medidas[0];
 
-        </section>
-      
+$color = array ('rojo'=&gt;101, 'verde'=&gt;51, 'azul'=&gt;255); 
+
+#Acceso:
+echo $color['rojo']; // No olvidar las comillas
+echo array_keys($color);
+</code></pre>
+
+            </section>
+    
+
+
+
+    
+    <section>
         <section >
-          <h2><a id="user-content-roles-de-usuarios" class="anchor" href="#roles-de-usuarios" aria-hidden="true"></a>Roles de Usuarios</h2>
+            <h1><a id="user-content-4-salida-estándar" class="anchor" href="#4-salida-estándar" aria-hidden="true"></a>4. Salida estándar</h1>
+<p>¿Cómo enviar mensajes a la salida estándar?</p>
 <ul>
-<li><em>SuperAdmin</em> – Quién cuenta con acceso a la característica de administración de la red de sitios completa. Una instalación de WP permite gestionar varios sitios en el mismo alojamiento.</li>
-<li><em>Administrador</em> – Quién tiene acceso a todas las características de administración de un sitio en particular.</li>
-<li><em>Editor</em> – Quién puede publicar y editar entradas, propias y de otros usuarios.</li>
-<li><em>Autor</em> – Quién puede publicar y editar sus propias entradas.</li>
-<li><em>Colaborador</em> – Quién puede escribir y editar sus propias entradas, pero no publicarlas.</li>
-<li><em>Subscriptor</em> – Quién solamente puede editar su perfil.</li>
+<li>echo — Muestra una o más cadenas separada por ‘,’.</li>
+<li>print — Mostrar solo una cadena.</li>
+<li>printf — Imprimir una cadena con formato.</li>
+<li>print_r — Imprime información legible para humanos.</li>
+<li>var_dump— Vuelca información sobre una variable. La información y su tipo</li>
 </ul>
 
-        </section>
-      
+            </section>
+        
+            <section >
+                <h2><a id="user-content-diferencias-echo-o-print" class="anchor" href="#diferencias-echo-o-print" aria-hidden="true"></a>Diferencias echo o print</h2>
+<ul>
+<li><strong>Void</strong> echo (string argument1[,…string argumentN])</li>
+<li><strong>Int</strong> print (argument)
+<ul>
+<li>print solo tiene un argumento (echo puede tener varios)</li>
+<li>si print devuelve 1 (significa que ha generado la salida)</li>
+</ul>
+</li>
+</ul>
+<p>No es obligatorio el uso de paréntesis ya que no son
+realmente una función.</p>
+<pre><code class="language-PHP">echo &quot;Hola mundo&quot;;
+echo &quot;Hola &quot;, &quot;mundo&quot;; //dos argumentos
+print &quot;Hola mundo&quot;;
+print &quot;Hola &quot;. &quot;mundo&quot;; // el operador '.' concatena cadenas
+</code></pre>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+    <section>
         <section >
-          <h2><a id="user-content-tareas-administrador" class="anchor" href="#tareas-administrador" aria-hidden="true"></a>Tareas Administrador</h2>
+            <h1><a id="user-content-5-variables" class="anchor" href="#5-variables" aria-hidden="true"></a>5. Variables</h1>
 <ul>
-<li><em>Actualizaciones</em>. En esta opción podrás ver todo lo relacionado con las diferentes actualizaciones disponibles para WP, incluyendo la versión de la plataforma, temas y plugins. Es importante mantener actualizado todo, por motivos de seguridad.</li>
-<li><em>Entradas.</em> Desde aquí puedes administrarlas. También en esta sección podrás agregar y modificar tanto categorías como etiquetas.</li>
-<li><em>Media.</em> Agrega imágenes, archivos y hasta pequeños vídeos para usarlos en tus entradas o páginas.</li>
-<li><em>Páginas.</em> A diferencia de las entradas, no tienen fecha de publicación.</li>
-<li><em>Comentarios.</em> Área en donde administras todos los comentarios que se van publicando ya sea en tu blog o en tus páginas. Los puedes editar, eliminar o mandar al spam. También puedes seleccionar si prefieres primero verlos y aprobarlos o que se publiquen automáticamente.</li>
-<li><em>Información de tu tema o plantilla.</em> Este apartado no aparece en todos los casos, más bien solo cuando utilizas un tema “Premium” o que tiene su propio panel de opciones para modificar su estructura y diseño.</li>
+<li>No se declara el tipo de las variables.</li>
+<li>Las variables se pueden asignar
+<ul>
+<li>Por valor</li>
+<li>Por referencia (con &amp;)</li>
+<li>Creación de nombres de variables dinámico.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-PHP">$x='equis';
+$_x = &amp;$x; //referencia a $x
+$_x ='x';
+echo $x; //salida: x
+echo $_x; //salida: x
+$a = &quot;hola&quot;;
+$$a = &quot;mundo&quot;; //nombrar una variable con otra variable
+print &quot;$a $hola\n&quot;; //salida: hola mundo
+print &quot;$a ${a}s\n&quot;; //salida: hola hola //utilizaremos ${} para evitar errores
+print &quot;$a ${$a}&quot;;  //salida: hola mundo //podemos acceder al valor de una variable ($mundo) nombrada en otra ($a)
+</code></pre>
+
+            </section>
+        
+            <section >
+                <h2><a id="user-content-¿de-qué-tipo-es-la-variable" class="anchor" href="#¿de-qué-tipo-es-la-variable" aria-hidden="true"></a>¿De qué tipo es la variable?</h2>
+<ul>
+<li>gettype() devuelve el tipo de una variable</li>
+<li>is_type() comprueba si una variable es de un tipo dado:</li>
+</ul>
+<p><code>php is_array(), is_bool(), is_null(), is_object(), is_resource(), is_scalar(),is_string()</code></p>
+<pre><code class="language-php"></code></pre>
+
+            </section>
+        
+            <section >
+                <h2><a id="user-content-ámbito-de-variables" class="anchor" href="#ámbito-de-variables" aria-hidden="true"></a>Ámbito de variables</h2>
+<ul>
+<li>Local: Variable definida en una función
+<ul>
+<li>Está limitada a dicha función.</li>
+<li>Se elimina al acabar la ejecución de la función</li>
+<li>Salvo si la variable se declara como <strong>static</strong> .</li>
+</ul>
+</li>
+<li>Global:
+<ul>
+<li>No se puede definir dentro de las funciones a menos que :
+<ul>
+<li>se declare en la función con la palabra clave ‘global’</li>
+<li>O que se acceda con el array $GLOBALS[indice]</li>
+</ul>
+</li>
+<li>Existen durante todo el tiempo de proceso del fichero</li>
+<li>Al acabar de procesar el fichero se eliminan las variables globales</li>
+</ul>
+</li>
 </ul>
 
-        </section>
-      
+            </section>
+        
+            <section >
+                <h2><a id="user-content-superglobal" class="anchor" href="#superglobal" aria-hidden="true"></a>Superglobal</h2>
+<ul>
+<li>
+<p>Variables predefinidas en PHP</p>
+</li>
+<li>
+<p>Están disponibles en todos los ámbitos.</p>
+</li>
+<li>
+<p>$GLOBALS — Array con todas las variables disponibles en el ámbito global</p>
+</li>
+<li>
+<p>$_SERVER — Información del entorno del servidor y de ejecución</p>
+</li>
+<li>
+<p>$_GET(POST) — Variables HTTP GET(POST)</p>
+</li>
+<li>
+<p>$_FILES — Variables de Carga de Archivos HTTP</p>
+</li>
+<li>
+<p>$_REQUEST — Variables HTTP Request: GET+POTS+COOKIE</p>
+</li>
+<li>
+<p>$_SESSION — Variables de sesión</p>
+</li>
+<li>
+<p>$_COOKIE— Variables con datos de la cookie</p>
+</li>
+<li>
+<p>$_ENV— Variables del entorno</p>
+</li>
+</ul>
+
+            </section>
+        
+            <section >
+                <h2><a id="user-content-ejercicio-3" class="anchor" href="#ejercicio-3" aria-hidden="true"></a>Ejercicio 3</h2>
+<p><a href="https://asociacionpiruleta.cloudaccess.host/PHP/T2/tutoPhp.php">https://asociacionpiruleta.cloudaccess.host/PHP/T2/tutoPhp.php</a></p>
+<ul>
+<li>Analiza este fichero y mira el funcionamiento.</li>
+</ul>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+    <section>
         <section >
-          <ul>
-<li><em>Apariencia.</em> En esta sección puedes agregar, instalar o eliminar nuevos temas, administrar los widgets, crear y modificar menús, editar el código de los archivos de tu tema (incluyendo el CSS) y también personalizar el título y la portada estática de tu tema (la página de inicio).</li>
-<li><em>Plugins.</em> Agrega, modifica, instala o elimina nuevos plugins.</li>
-<li><em>Usuarios.</em> Aquí puedes modificar tu perfil, agregar tus links de redes sociales, cambiar tu alias, tu email e información básica. Si otras personas van a editar tu sitio o publicar contenido, en esta sección puedes crearles un perfil y definir su rol.</li>
-<li><em>Herramientas.</em> Importar y exportar son las opciones disponibles inicialmente. Si instalas ciertos plugins, su panel de opciones podría aparecer en esta sección.</li>
-<li><em>Ajustes.</em> Toda la configuración básica de tu sitio se hace en esta parte. También podrás modificar las opciones de cualquier plugin que instales en esta sección. De entrada tendrás acceso a configurar las opciones generales, de escritura, de lectura, de comentarios, de medios y de enlaces permanentes.</li>
-</ul>
-
-        </section>
-      
-    </section>
-  
-
-  
-    <section >
-      <h1><a id="user-content-4-sistema-de-ficheros-wp" class="anchor" href="#4-sistema-de-ficheros-wp" aria-hidden="true"></a>4. Sistema de Ficheros WP</h1>
-<img src="./media/T4/WP_files.png">
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-arquitectura-cliente-servidor" class="anchor" href="#arquitectura-cliente-servidor" aria-hidden="true"></a>Arquitectura Cliente Servidor</h2>
-<p><img src="./media/T1/image2.png" alt="Image of La World Wide Web"></p>
-<!-- img src="./media/T1/image2.png" -->
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-html" class="anchor" href="#html" aria-hidden="true"></a>HTML</h3>
-<p><img src="./media/T1/image1.png" alt="Image of HTML"></p>
-<p><code>&lt;!DOCTYPE html &gt;</code></p>
-<p><code> &lt;li id=&quot;section-3&quot; class=&quot;section main clearfix&quot; role=&quot;region&quot; aria-label=&quot;Laboratorio&quot;&gt;</code></p>
-
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-url-uniform-resource-locator" class="anchor" href="#url-uniform-resource-locator" aria-hidden="true"></a>URL: Uniform Resource Locator</h2>
-<p>Són cadenas de carácteres con un formato que identifica recursos indicando su dirección electrónica</p>
-<p><code>&lt;esquema&gt;://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;url-path&gt;</code></p>
-<p>esquema=protocolo sistema:</p>
-<ul>
-<li>
-<p><a href="http://host">http://host</a>[:port][abs_path]</p>
-</li>
-<li>
-<p><a href="http://anubis.uji.es/index.html">http://anubis.uji.es/index.html</a></p>
-</li>
-<li>
-<p><a href="ftp://al007@anubis.uji.es/un/ejemplo.txt">ftp://al007@anubis.uji.es/un/ejemplo.txt</a></p>
-<p><a href="https://aulavirtual.uji.es/course/view.php?id=64297#section-3">https://aulavirtual.uji.es/course/view.php?id=64297#section-3</a></p>
-</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-ejemplo-url-http" class="anchor" href="#ejemplo-url-http" aria-hidden="true"></a>Ejemplo URL HTTP</h3>
-<ul>
-<li><a href="http://www.milanuncios.com/informaticos-en-almeria/pp.htm?dias=1&amp;demanda=n">http://www.milanuncios.com/informaticos-en-almeria/pp.htm?dias=1&amp;demanda=n</a></li>
-<li><a href="https://duckduckgo.com/?q=pp&amp;t=ffab&amp;ia=about">https://duckduckgo.com/?q=pp&amp;t=ffab&amp;ia=about</a></li>
-<li><a href="https://www.google.es/search?q=llido&amp;as_sitesearch=uji.es&amp;gfe_rd=ssl&amp;ei=pRDx">https://www.google.es/search?q=llido&amp;as_sitesearch=uji.es&amp;gfe_rd=ssl&amp;ei=pRDx</a></li>
-<li><a href="http://dllido.al.nisu.org/EI1036_1042/PortalJson.php?action=modificarAlumnoJson">http://dllido.al.nisu.org/EI1036_1042/PortalJson.php?action=modificarAlumnoJson</a></li>
-<li><a href="https://aulavirtual.uji.es/course/view.php?id=64297#section-3">https://aulavirtual.uji.es/course/view.php?id=64297#section-3</a></li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <p>Carácteres especiales:</p>
-<ul>
-<li>/: Indica path del recurso</li>
-<li>#: indica una etiqueta que tiene el id referenciado (&lt; id==section-3&gt;)</li>
-<li>&amp;,=: El cliente web los datos del formulario cuando se usa el método get los envia como pares nombre=valor unidos por &amp;</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-url-amigables" class="anchor" href="#url-amigables" aria-hidden="true"></a>URL amigables</h3>
-<p><a href="http://www.example.com/camaras/reflex/canon-eos-5d-mark-2/">http://www.example.com/camaras/reflex/canon-eos-5d-mark-2/</a></p>
-<ul>
-<li>Mejora el SEO</li>
-<li>El servidor  manipula la URL para redireccionarlos a los recursos internos correctamente.</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-url-amigables" class="anchor" href="#url-amigables" aria-hidden="true"></a>URL amigables</h2>
-<ul>
-<li>Página de entradas de la categoría correspondiente a la primera sesión del curso:
-<a href="https://cursoswp.educacion.navarra.es/cursowp2018/categoria/sesion-1/">https://cursoswp.educacion.navarra.es/cursowp2018/categoria/sesion-1/</a>. La “Sesión 1” es una categoría de entradas, que agrupa todos los elementos de contenido que se tratarán en dicha sesión.</li>
-<li>Página de las entradas que han sido marcadas con la etiqueta “widgets”: <a href="https://cursoswp.educacion.navarra.es/cursowp2018/etiqueta/widgets/">https://cursoswp.educacion.navarra.es/cursowp2018/etiqueta/widgets/</a>. La etiqueta “widgets” es un marcador semántico que sirve para poder agrupar todos los artículos que contengan dicho concepto.</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-clientes-web-curlget" class="anchor" href="#clientes-web-curlget" aria-hidden="true"></a>Clientes Web CURL/GET</h2>
-<ul>
-<li>
-<p>Descargar un documento html.
-<small>curl <a href="http://www.pekegifs.com/pekemundo/dibujos/colorearonline.htm">http://www.pekegifs.com/pekemundo/dibujos/colorearonline.htm</a>  -o pp.html
-</small></p>
-</li>
-<li>
-<p>Descargar todos los ficheros MP3 de un subdirectorio.<br>
-<small> wget ‐‐level=1 ‐‐recursive ‐‐no-parent ‐‐accept mp3,MP3 <a href="http://example.com/mp3/">http://example.com/mp3/</a>
-</small></p>
-</li>
-</ul>
-<small>
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-servidor-web" class="anchor" href="#servidor-web" aria-hidden="true"></a>Servidor Web</h2>
-<ul>
-<li>Servidor Web <a href="https://es.wikipedia.org/wiki/Servidor_HTTP_Apache">Apache </a>: <a href="https://es.wikipedia.org/wiki/LAMP">LAMP</a></li>
-<li>Servidor web local php: <code>php -S localhost</code></li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-el-protocolo-http" class="anchor" href="#el-protocolo-http" aria-hidden="true"></a>El protocolo HTTP</h2>
-<p>Cliente</p>
-<pre><code class="language-txt"> GET /un/ejemplo.html HTTP/1.0 CRLF
- User Agent: Mozilla CRLF
- (..)
- Referer:http://anubis.uji.es/index.html
- CRLF
+            <h1><a id="user-content-6-formularios" class="anchor" href="#6-formularios" aria-hidden="true"></a>6. Formularios</h1>
+<h3><a id="user-content-ejemplo-radio" class="anchor" href="#ejemplo-radio" aria-hidden="true"></a>Ejemplo: radio</h3>
+<pre><code class="language-HTML">&lt;form action=&quot;procesar.php&quot; method=&quot;get&quot;&gt;
+Sexo:
+  &lt;INPUT TYPE=&quot;radio&quot; NAME=&quot;sexo&quot; VALUE=&quot;M&quot; CHECKED &gt;Mujer
+  &lt;INPUT TYPE=&quot;radio&quot; NAME=&quot;sexo&quot; VALUE=&quot;H&quot;&gt;Hombre
+  &lt;INPUT TYPE=&quot;submit&quot;&gt;
+&lt;/form&gt;
 </code></pre>
-<p>Servidor</p>
-<pre><code class="language-txt"> HTTP/1.1 200 OK CRLF
- Date: Mon, 27 Sep 199 21:23:20 GMT CRLF
- Server: Apache/1.3.3 (Unix) CRLF
- Last-Modified: Sun, 26 Sep 1999 ... CRLF
- Content-Length: 5654 CRLF
- Content-Type: text/html CRLF
- CRLF
- &lt;PAGE HTML&gt;
-</code></pre>
-<hr>
-<h2><a id="user-content-" class="anchor" href="#" aria-hidden="true"></a><img src="./media/T1/image12.jpeg" alt="Image of headersHttp"></h2>
-<h3><a id="user-content-métodos" class="anchor" href="#métodos" aria-hidden="true"></a>Métodos</h3>
-<p>GET|HEAD|POST|PUT|DELETE |OPTIONS|TRACE</p>
-<ul>
-<li>HEAD: recupera las cabeceras HTTP de respuesta.
-<ul>
-<li>obtener meta-información sobre el recurso.</li>
-<li>comprobar la validez de hiperenlaces.</li>
-<li>comprobar la accesibilidad, actualización, etc.</li>
-</ul>
-</li>
-<li>POST: ejecuta el recurso con los datos del cuerpo de la petición.
-<ul>
-<li>Envío de un mensaje a un grupo de noticias.</li>
-<li>Insertar un nuevo registro en una base de datos.</li>
-<li>Formularios.</li>
-</ul>
-</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-códigos-de-estado-http" class="anchor" href="#códigos-de-estado-http" aria-hidden="true"></a>Códigos de estado HTTP</h3>
-<ul>
-<li>2xx: la petición se realizó con éxito.</li>
-<li>200 OK.</li>
-<li>3xx: redirecciones.</li>
-<li>301 Moved Permanently.</li>
-<li>302 Moved Temporarily</li>
-<li>4xx: error del cliente</li>
-<li>400 Bad Request</li>
-<li>403 Forbidden</li>
-<li>404 Not Found</li>
-<li>5xx: error del servidor</li>
-<li>500 Internal Server Error</li>
-<li>501 Not Implemented</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-robotstxt" class="anchor" href="#robotstxt" aria-hidden="true"></a>Robots.txt</h3>
-<ul>
-<li>
-<p>Fichero donde indicar el comportamiento que tienen que tener los buscadores y los programas de descargas sobre el servidor.</p>
-</li>
-<li>
-<p>Se supone que todos los
-programas de descarga deben
-respetarlo, aunque no siempre es
-así.</p>
-</li>
-<li>
-<p>Se utilizan 2 directivas:</p>
-<ul>
-<li>User-agent:</li>
-<li>Disallow:</li>
-</ul>
-</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-ejemplos" class="anchor" href="#ejemplos" aria-hidden="true"></a>Ejemplos:</h3>
-<pre><code class="language-txt">#Para desactivar todas la arañas:
-User-agent: *
-Disallow: /
-
-#Prohibimos que las arañas carguen los directorios /cgi-bin/ y /imágenes/
-User-agent: *
-Disallow: /cgi-bin/
-Disallow: /imagenes/
-
-#Prohibimos que emailspider lea cualquier página
-User-agent: emailspider
-Disallow: /
+<pre><code class="language-PHP">#Procesar.php
+&lt;?PHP
+$sexo = $_REQUEST[&quot;sexo&quot;];
+print ($sexo);
+?&gt;
 </code></pre>
 
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-sesión" class="anchor" href="#sesión" aria-hidden="true"></a>Sesión</h3>
-<p>HTTP es un protocolo sin sesión.</p>
+            </section>
+        
+            <section >
+                <h2><a id="user-content-ejercicio-5" class="anchor" href="#ejercicio-5" aria-hidden="true"></a>Ejercicio 5:</h2>
 <ul>
-<li>¿Cómo evitamos que pida reiteradamente la autentificación?</li>
-<li>¿Cómo recordamos el carrito de la compra?</li>
+<li>¿Cuál es la petición al servidor al pulsar submit/enviar?</li>
+<li>Añade el nombre de la persona en el formulario y muéstralo en Procesar.php.</li>
 </ul>
 
-    </section>
-  
-
-  
-    <section >
-      <h4><a id="user-content-simulación-de-la-sesión" class="anchor" href="#simulación-de-la-sesión" aria-hidden="true"></a>Simulación de la Sesión</h4>
-<ul>
-<li>A partir de controles HTML ocultos.
-<small><code>&lt;INPUT type=&quot;hidden&quot; name=&quot;session&quot; value=&quot;1234&quot;&gt;</code></small></li>
-<li>URL rewriting.</li>
-<li>Uso cookies.</li>
-<li>Una combinación de cookie y bases de datos.</li>
-<li>Usar el objeto <strong>SESSION</strong>  provisto por los entornos de programación como PHP, ASP o J2EE</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-url-rewriting" class="anchor" href="#url-rewriting" aria-hidden="true"></a>URL REWRITING</h3>
-<p>Consiste en incluir la información del estado en la propio URL</p>
-<p><a href="http://www.pekegifs.com/pekemundo/dibujos//comprar.asp?paso=3&amp;producto1=01992CX&amp;producto2=ZZ112230&amp;">http://www.pekegifs.com/pekemundo/dibujos//comprar.asp?paso=3&amp;producto1=01992CX&amp;producto2=ZZ112230&amp;</a></p>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-cookies" class="anchor" href="#cookies" aria-hidden="true"></a>Cookies</h3>
-<p>Una cookie es información que un servidor puede enviar al cliente para que la almacene y se reenvíe en posteriores accesos (header).</p>
-<p>Permiten:</p>
-<ul>
-<li>Recordar preferencias de un cliente para generar contenido personalizado</li>
-<li>Para almacenar información de sesión</li>
-<li>En general: para “simular” sesiones</li>
-<li>No para almacenar información privada. claves, cuentas…</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h4><a id="user-content-variables-de-las--cookies" class="anchor" href="#variables-de-las--cookies" aria-hidden="true"></a>Variables de las  Cookies</h4>
-<p>fichero con pares nombre=valor de tamaño limitado.</p>
-<ul>
-<li>name= nombre de la cookie</li>
-<li>expires=DD-Month-YY HH:MM:SS GMT fecha caducidad.</li>
-<li>secure=tipo de seguridad (sólo en HTTPS)</li>
-<li>path= ruta específica a los recursos a los que se envía la - cookie. Por defecto lo añade el servidor.</li>
-<li>domain=ámbito con el cual el cliente identifica si debe enviar la cookie al servidor</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h4><a id="user-content-ejemplo-de-cookies--en-chrome" class="anchor" href="#ejemplo-de-cookies--en-chrome" aria-hidden="true"></a>Ejemplo de cookies  en Chrome</h4>
-<p><img src="./media/T1/image11.jpeg" alt="Image of coockies"></p>
-
-    </section>
-  
-
-  
-    <section >
-      <h4><a id="user-content-contras-cookies" class="anchor" href="#contras-cookies" aria-hidden="true"></a>Contras Cookies</h4>
-<ul>
-<li>Privacidad: Otros servidores podrían pueden leer información de las cookies del cliente.</li>
-<li>Los datos pueden ser alterados: Un usuario podría modificar el fichero de una cookie.</li>
-<li>Implementación compleja: Mantener “a mano” el estado en el cliente es complicado si queremos hacerlo de manera robusta.</li>
-<li>Tamaño de datos limitado: Tanto el tamaño máximo permitido por las cookies como la longitud máxima de una URL pueden darnos problemas.</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-proceso-de-producción-de-un-proyecto-web" class="anchor" href="#proceso-de-producción-de-un-proyecto-web" aria-hidden="true"></a>Proceso de Producción de un Proyecto Web</h2>
-<ul>
-<li>Planificación</li>
-<li></li>
-<li>Diseño</li>
-<li>Desarrollo</li>
-<li>Implementación</li>
-<li>Evaluación</li>
-<li>Mantenimiento</li>
-</ul>
-
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-definición-un-proyecto-web" class="anchor" href="#definición-un-proyecto-web" aria-hidden="true"></a>Definición un proyecto Web</h2>
-<h3><a id="user-content-arquitectura-de-la-informació-thumbnail" class="anchor" href="#arquitectura-de-la-informació-thumbnail" aria-hidden="true"></a>Arquitectura de la informació: Thumbnail</h3>
-<p><img src="./media/T1/image3.png" alt="Image of Architecture"></p>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-diseño-web--wireframe" class="anchor" href="#diseño-web--wireframe" aria-hidden="true"></a>Diseño web:  WireFrame</h3>
-<p><img src="./media/T1/image9.png" alt="Image of thumbnail"></p>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-prototipado-mockup" class="anchor" href="#prototipado-mockup" aria-hidden="true"></a>Prototipado: Mockup</h3>
-<p><img src="./media/T1/image4.png" alt="Image of Wireframe"></p>
-
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-definición-de-la-interficie-de-cada-servicio" class="anchor" href="#definición-de-la-interficie-de-cada-servicio" aria-hidden="true"></a>Definición de la interficie de cada servicio</h3>
-<table>
-<thead>
-<tr>
-<th>Title</th>
-<th>Título</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>URL</td>
-<td>URL</td>
-</tr>
-<tr>
-<td>Method</td>
-<td>GET/POST</td>
-</tr>
-<tr>
-<td>URL Params</td>
-<td>Parámetros en la URL</td>
-</tr>
-<tr>
-<td>Data Params</td>
-<td>Parámetros que requiere/envía el formulario</td>
-</tr>
-<tr>
-<td>Success</td>
-<td>Respuesta si el registro es correctamente</td>
-</tr>
-<tr>
-<td>Error</td>
-<td>Respuesta si hay algún error</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>Precondiciones/postcondiciones</td>
-</tr>
-</tbody>
-</table>
-
-    </section>
-  
-
-  
-    <section >
-      <table>
-<thead>
-<tr>
-<th>Title</th>
-<th>R01 Name:​Registro</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>URL</td>
-<td>Portal.php​?action=registro</td>
-</tr>
-<tr>
-<td>Method</td>
-<td>GET</td>
-</tr>
-<tr>
-<td>URL Params</td>
-<td>action</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>​El usuario quiere registrarse en el portal.</td>
-</tr>
-<tr>
-<td>Data Params</td>
-<td>Nombre, Email, Clave</td>
-</tr>
-<tr>
-<td>Success</td>
-<td>Portal.php​?action= registrar</td>
-</tr>
-<tr>
-<td>Error</td>
-<td>Indica errores y vuelve cargar la misma página</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>- Poner un enlace en portal en el menú pero ocultar al autentificar.</td>
-</tr>
-<tr>
-<td></td>
-<td>- Al  hacer click  se muestra formulario.</td>
-</tr>
-<tr>
-<td></td>
-<td>- Tras rellenar campos el usuario debe dar a enviar.</td>
-</tr>
-</tbody>
-</table>
-
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-servidor-web-con-php" class="anchor" href="#servidor-web-con-php" aria-hidden="true"></a>Servidor WEB con PHP</h2>
-<p>¿Cómo funciona el intérprete de PHP?</p>
-<p><img src="./media/T1/image10.png" alt="Image of Wireframe"></p>
-
-    </section>
-  
-
-  
-    <section >
-      <h2><a id="user-content-configuración-servidor-apachehtaccess" class="anchor" href="#configuración-servidor-apachehtaccess" aria-hidden="true"></a>Configuración Servidor apache:.htaccess</h2>
-<ul>
-<li>
-<p>http.conf</p>
-</li>
-<li>
-<p>.htaccess (personalizado en directorios)</p>
-</li>
-</ul>
-<p>Más Info:</p>
-<ul>
-<li>
-<p><a href="http://httpd.apache.org/docs/2.2/es/">http://httpd.apache.org/docs/2.2/es/</a></p>
-</li>
-<li>
-<p><a href="http://php.net/manual/es/">http://php.net/manual/es/</a></p>
-</li>
-</ul>
-<pre><code class="language-txt">#.htaccess
-Options +Indexes
-RewriteEngine on
-RewriteBase /Lab2017/T
-RewriteRule pp/(.*)/(.*)$   phpInfo.php?Val1=$1&amp;Val2=$
-
+            </section>
+        
+            <section >
+                <h2><a id="user-content-checkbox" class="anchor" href="#checkbox" aria-hidden="true"></a>CHECKBOX</h2>
+<pre><code class="language-HTML">&lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;extras[]&quot; VALUE=&quot;garaje&quot; CHECKED&gt;Garaje
+&lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;extras[]&quot; VALUE=&quot;piscina&quot;&gt;Piscina
+&lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;extras[]&quot; VALUE=&quot;jardin&quot;&gt;Jardín
+</code></pre>
+<pre><code class="language-PHP">&lt;?php
+$extras = $_REQUEST[&quot;extras&quot;];
+foreach ($extras as $extra)
+    print (&quot;$extra&lt;BR&gt;\n&quot;);
+?&gt;
 </code></pre>
 
-    </section>
-  
-
-  
-    <section >
-      <h3><a id="user-content-ejemplos-htaccess" class="anchor" href="#ejemplos-htaccess" aria-hidden="true"></a>Ejemplos .htaccess</h3>
-<pre><code class="language-txt">#  listar directorios
-Options +Indexes
-IndexOptions -FancyIndexing
+            </section>
+        
+            <section >
+                <h2><a id="user-content-button" class="anchor" href="#button" aria-hidden="true"></a>BUTTON</h2>
+<pre><code class="language-HTML">&lt;INPUT TYPE=&quot;button&quot; NAME=&quot;actualizar&quot; VALUE=&quot;Actualizar datos&quot;&gt;
 </code></pre>
-<p><a href="https://piruletas.000webhostapp.com/teoria/T2/">https://piruletas.000webhostapp.com/teoria/T2/</a></p>
-<pre><code class="language-txt"># No listar directorios
-Options -Indexes
+<pre><code class="language-PHP">&lt;?php
+$actualizar = $_REQUEST[&quot;actualizar&quot;];
+if ($actualizar)
+  print (&quot;Se han actualizado los datos&quot;);
+?&gt;
 </code></pre>
-<p><a href="https://piruletas.000webhostapp.com/teoria/">https://piruletas.000webhostapp.com/teoria/</a></p>
+
+            </section>
+        
+            <section >
+                <h2><a id="user-content-select-múltiple" class="anchor" href="#select-múltiple" aria-hidden="true"></a>SELECT múltiple</h2>
+<pre><code class="language-HTML">Idiomas:
+&lt;SELECT MULTIPLE SIZE=&quot;3&quot; NAME=&quot;idiomas[]&quot;&gt;
+  &lt;OPTION VALUE=&quot;ingles&quot; SELECTED&gt;Inglés
+  &lt;OPTION VALUE=&quot;francés&quot;&gt;Francés
+  &lt;OPTION VALUE=&quot;alemán&quot;&gt;Alemán
+  &lt;OPTION VALUE=&quot;holandés&quot;&gt;Holandés
+&lt;/SELECT&gt;
+</code></pre>
+<pre><code class="language-PHP">&lt;?php
+$idiomas = $_REQUEST[&quot;idiomas&quot;];
+foreach ($idiomas as $idioma)
+   print (&quot;$idioma&lt;BR&gt;\n&quot;);
+?&gt;
+</code></pre>
+
+            </section>
+        
 
     </section>
-  
+    
 
-  
-    <section >
-      <h2><a id="user-content-¿dudas" class="anchor" href="#¿dudas" aria-hidden="true"></a>¿Dudas?</h2>
+
+
+    
+    <section>
+        <section >
+            <h1><a id="user-content-7-funciones" class="anchor" href="#7-funciones" aria-hidden="true"></a>7. Funciones</h1>
+<pre><code class="language-PHP">function suma ($x, $y)
+{
+   $s = $x + $y;
+   return $s;
+}
+</code></pre>
+<p>Salida:</p>
+<pre><code>$a=1;
+$b=2;
+$c=suma ($a, $b);
+print $c;
+</code></pre>
+
+            </section>
+        
+            <section >
+                <h4><a id="user-content-paso-parámetros" class="anchor" href="#paso-parámetros" aria-hidden="true"></a>Paso parámetros</h4>
+<ul>
+<li>Por defecto paso parámetros por valor</li>
+<li>Paso por referencia:</li>
+</ul>
+<pre><code class="language-PHP">function incrementa (&amp;$a)
+{
+  $a = $a + 1;
+}
+$a=1;
+incrementa ($a);
+print $a; // Muestra un 2
+</code></pre>
+
+            </section>
+        
+            <section >
+                <h4><a id="user-content-argumentos" class="anchor" href="#argumentos" aria-hidden="true"></a>Argumentos</h4>
+<ul>
+<li>Argumentos por defecto</li>
+<li>Los argumentos con valores por defecto deben ser siempre
+los últimos:</li>
+</ul>
+<pre><code class="language-PHP">function muestranombre ($nombre, $titulo= &quot;Sr.&quot;)
+{
+  print &quot;Estimado $titulo $nombre:\n&quot;;
+}
+muestranombre (“Fernández”);
+muestranombre (“Fernández”, &quot;Prof.&quot;);
+</code></pre>
+<p>Salida:</p>
+<pre><code>Estimado Sr. Fernández:
+Estimado Prof. Fernández:
+</code></pre>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2><a id="user-content-bibliografía" class="anchor" href="#bibliografía" aria-hidden="true"></a>Bibliografía</h2>
+<ul>
+<li>PHP: <a href="http://es.php.net/manual/es/">http://es.php.net/manual/es/</a></li>
+<li>Guia Estilos: <a href="https://www.php-fig.org/psr/psr-2/">https://www.php-fig.org/psr/psr-2/</a></li>
+<li>Apache: <a href="http://httpd.apache.org/docs/2.3/es/">http://httpd.apache.org/docs/2.3/es/</a></li>
+<li>Callbacks: <a href="https://diego.com.es/funciones-anonimas-y-clausuras-en-php">https://diego.com.es/funciones-anonimas-y-clausuras-en-php</a></li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2><a id="user-content-¿dudas" class="anchor" href="#¿dudas" aria-hidden="true"></a>¿Dudas?</h2>
 <p><img src="./media/image8.png" alt="Image de Dudas"></p>
 
-    </section>
-  
-
+            </section>
+    
 
 
     </div>
 
+
   </div>
 
-  <script src="libs/reveal.js/dist/reveal.js"></script>
+  <script src="libs/reveal.js/3.8.0/lib/js/head.min.js"></script>
+  <script src="libs/reveal.js/3.8.0/js/reveal.js"></script>
 
-<script src="libs/reveal.js/plugin/zoom/zoom.js"></script>
+  <script>
 
-<script src="libs/reveal.js/plugin/notes/notes.js"></script>
-<script src="libs/reveal.js/plugin/search/search.js"></script>
-<script src="libs/reveal.js/plugin/markdown/markdown.js"></script>
-<script src="libs/reveal.js/plugin/highlight/highlight.js"></script>
-<script src="libs/reveal.js/plugin/math/math.js"></script>
-<script>
     // More info https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
 
@@ -1012,7 +894,7 @@ Options -Indexes
         mouseWheel: true,
         hideAddressBar: true,
         previewLinks: true,
-        transition: 'fade',
+        transition: 'zoom',
         transitionSpeed: 'default',
         backgroundTransition: 'fade',
         viewDistance: 3,
@@ -1022,199 +904,216 @@ Options -Indexes
         parallaxBackgroundVertical: 5,
         display: 'block',
 
-        plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath],
-        
-        math: {
-            mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-            config: 'TeX-AMS_HTML-full',
-            TeX: { Macros: { RR: "{\\bf R}" } }
-        },
-        /*
         // More info https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
-            
-            { src: 'libs/reveal.js/3.8.0/plugin/search/search.js', async: true },
+            // { src: 'libs/reveal.js/3.8.0/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+            // { src: 'libs/reveal.js/3.8.0/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+            // { src: 'libs/reveal.js/3.8.0/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+            // { src: 'libs/reveal.js/3.8.0/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            { src: 'libs/reveal.js/3.8.0/plugin/notes/notes.js', async: true },
+            { src: 'libs/reveal.js/3.8.0/plugin/chart/Chart.min.js' },
+            { src: 'libs/reveal.js/3.8.0/plugin/chart/csv2chart.js' },
+            { src: 'libs/reveal.js/3.8.0/plugin/embed-tweet/embed-tweet.js' },
+            { src: 'libs/reveal.js/3.8.0/plugin/math/math.js', async: true },
+            { src: 'libs/highlight.js/9.12.0/highlight.js', async: true },
+            { src: 'libs/reveal.js/3.8.0/plugin/anything/anything.js' },
+            { src: 'libs/reveal.js/3.8.0/plugin/mermaid/mermaid.min.js', async: true, callback: function() {mermaid.initialize({startOnLoad:false})} },	
+
+           
+        { src: 'libs/reveal.js/3.8.0/plugin/search/search.js', async: true },
+           
+
+           
+        { src: 'libs/reveal.js/3.8.0/plugin/zoom-js/zoom.js', async: true },
             
 
             
-            { src: 'libs/reveal.js-plugins/3.8.0/plugin/chalkboard/chalkboard.js' },
-                
-
-            
-            { src: 'libs/reveal.js/3.8.0/plugin/menu/menu.js' },
+        { src: 'libs/reveal.js/3.8.0/plugin/chalkboard/chalkboard.js' },
             
 
             
-            { src: 'libs/reveal.js/3.8.0/plugin/title-footer/title-footer.js', async: true, callback: function () { title_footer.initialize(); } },
+        { src: 'libs/reveal.js/3.8.0/plugin/menu/menu.js' },
             
-            {
-                src: 'libs/highlight.js/9.15.10/reveal-code-focus-1.0.0-mod.js',
-                async: true,
-                callback: function () {
-                    RevealCodeFocus();
-                }
-            },
-            // {src: 'libs/reveal.js/3.8.0/plugin/line-numbers/line-numbers.js'}
-        ],
-        keyboard: {
-            67: function () { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
-            66: function () { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
-            46: function () { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
-            8: function () { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
-            68: function () { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+
+            
+        { src: 'libs/reveal.js/3.8.0/plugin/title-footer/title-footer.js', async: true, callback: function () { title_footer.initialize(); } },
+            
+
+        {
+            src: 'libs/highlight.js/9.12.0/reveal-code-focus-1.0.0-mod.js',
+            async: true,
+            callback: function () {
+                RevealCodeFocus();
+            }
         },
-        chart: {
-            defaults: {
-                global: {
-                    title: { fontColor: "#FFF" },
-                    legend: {
-                        position: "bottom",
-                            labels: { fontColor: "#FFF" },
-                    },
-                    tooltips: {
+            // { src: 'libs/reveal.js/3.8.0/plugin/reveal-code-focus/highlight.pack.js' },
+            // { src: 'libs/reveal.js/3.8.0/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
+           // {src: 'libs/reveal.js/3.8.0/plugin/line-numbers/line-numbers.js'}
+        ]
+        ,
+    keyboard: {
+        67: function () { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+        66: function () { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+        46: function () { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+        8: function () { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+        68: function () { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+    },
+    math: {
+       // mathjax: 'libs/reveal.js/3.8.0/plugin/math/MathJax.js',
+             mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+            config: 'TeX-AMS_HTML-full'
+    },
+    chart: {
+        defaults: {
+            global: {
+                title: { fontColor: "#FFF" },
+                legend: {
+                    position: "bottom",
                         labels: { fontColor: "#FFF" },
-                    },
                 },
-                scale: {
-                    scaleLabel: { fontColor: "#FFF" },
-                    gridLines: { color: "#FFF", zeroLineColor: "#FFF" },
-                    ticks: { fontColor: "#FFF" },
-                }
+                tooltips: {
+                    labels: { fontColor: "#FFF" },
+                },
             },
-            line: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"], "borderDash": [[5, 10], [0, 0]] },
-            bar: { backgroundColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
-            pie: { backgroundColor: [["rgba(0,0,0,.8)", "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"]] },
-            radar: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+            scale: {
+                scaleLabel: { fontColor: "#FFF" },
+                gridLines: { color: "#FFF", zeroLineColor: "#FFF" },
+                ticks: { fontColor: "#FFF" },
+            }
         },
-        anything: [ 
-            {
-                className: "mermaid"
-            },
-            // ...
-        ],
-        menu: {
-            // Specifies which side of the presentation the menu will 
-            // be shown. Use 'left' or 'right'.
-            side: 'left',
+        line: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"], "borderDash": [[5, 10], [0, 0]] },
+        bar: { backgroundColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+        pie: { backgroundColor: [["rgba(0,0,0,.8)", "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"]] },
+        radar: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+    },
+    anything: [ 
+	 {
+	  className: "mermaid"
+	 },
+	 // ...
+	],
+    menu: {
+        // Specifies which side of the presentation the menu will 
+        // be shown. Use 'left' or 'right'.
+        side: 'left',
 
-                // Specifies the width of the menu.
-                // Can be one of the following:
-                // 'normal', 'wide', 'third', 'half', 'full', or
-                // any valid css length value
-                width: 'normal',
+            // Specifies the width of the menu.
+            // Can be one of the following:
+            // 'normal', 'wide', 'third', 'half', 'full', or
+            // any valid css length value
+            width: 'normal',
 
-                    // Add slide numbers to the titles in the slide list.
-                    // Use 'true' or format string (same as reveal.js slide numbers)
-                    numbers: false,
+                // Add slide numbers to the titles in the slide list.
+                // Use 'true' or format string (same as reveal.js slide numbers)
+                numbers: false,
 
-                        // Specifies which slide elements will be used for generating
-                        // the slide titles in the menu. The default selects the first
-                        // heading element found in the slide, but you can specify any
-                        // valid css selector and the text from the first matching
-                        // element will be used.
-                        // Note: that a section data-menu-title attribute or an element
-                        // with a menu-title class will take precedence over this option
-                        titleSelector: 'h1, h2, h3, h4, h5, h6',
+                    // Specifies which slide elements will be used for generating
+                    // the slide titles in the menu. The default selects the first
+                    // heading element found in the slide, but you can specify any
+                    // valid css selector and the text from the first matching
+                    // element will be used.
+                    // Note: that a section data-menu-title attribute or an element
+                    // with a menu-title class will take precedence over this option
+                    titleSelector: 'h1, h2, h3, h4, h5, h6',
 
-                            // If slides do not have a matching title, attempt to use the
-                            // start of the text content as the title instead
-                            useTextContentForMissingTitles: false,
+                        // If slides do not have a matching title, attempt to use the
+                        // start of the text content as the title instead
+                        useTextContentForMissingTitles: false,
 
-                                // Hide slides from the menu that do not have a title.
-                                // Set to 'true' to only list slides with titles.
-                                hideMissingTitles: false,
+                            // Hide slides from the menu that do not have a title.
+                            // Set to 'true' to only list slides with titles.
+                            hideMissingTitles: false,
 
-                                    // Adds markers to the slide titles to indicate the 
-                                    // progress through the presentation. Set to 'false'
-                                    // to hide the markers.
-                                    markers: true,
+                                // Adds markers to the slide titles to indicate the 
+                                // progress through the presentation. Set to 'false'
+                                // to hide the markers.
+                                markers: true,
 
-                                        // Specify custom panels to be included in the menu, by
-                                        // providing an array of objects with 'title', 'icon'
-                                        // properties, and either a 'src' or 'content' property.
-                                        // custom: false,
-                                        custom: [],
-                                            // Specifies the themes that will be available in the themes
-                                            // menu panel. Set to 'true' to show the themes menu panel
-                                            // with the default themes list. Alternatively, provide an
-                                            // array to specify the themes to make available in the
-                                            // themes menu panel, for example...
-                                            // [
-                                            //     { name: 'Black', theme: 'css/theme/black.css' },
-                                            //     { name: 'White', theme: 'css/theme/white.css' },
-                                            //     { name: 'League', theme: 'css/theme/league.css' }
-                                            // ]
-                                            themes: false,
+                                    // Specify custom panels to be included in the menu, by
+                                    // providing an array of objects with 'title', 'icon'
+                                    // properties, and either a 'src' or 'content' property.
+                                    // custom: false,
+                                    custom: [],
+                                        // Specifies the themes that will be available in the themes
+                                        // menu panel. Set to 'true' to show the themes menu panel
+                                        // with the default themes list. Alternatively, provide an
+                                        // array to specify the themes to make available in the
+                                        // themes menu panel, for example...
+                                        // [
+                                        //     { name: 'Black', theme: 'css/theme/black.css' },
+                                        //     { name: 'White', theme: 'css/theme/white.css' },
+                                        //     { name: 'League', theme: 'css/theme/league.css' }
+                                        // ]
+                                        themes: false,
 
-                                                // Specifies the path to the default theme files. If your
-                                                // presentation uses a different path to the standard reveal
-                                                // layout then you need to provide this option, but only
-                                                // when 'themes' is set to 'true'. If you provide your own 
-                                                // list of themes or 'themes' is set to 'false' the 
-                                                // 'themesPath' option is ignored.
-                                                themesPath: 'css/theme/',
+                                            // Specifies the path to the default theme files. If your
+                                            // presentation uses a different path to the standard reveal
+                                            // layout then you need to provide this option, but only
+                                            // when 'themes' is set to 'true'. If you provide your own 
+                                            // list of themes or 'themes' is set to 'false' the 
+                                            // 'themesPath' option is ignored.
+                                            themesPath: 'css/theme/',
 
-                                                    // Specifies if the transitions menu panel will be shown.
-                                                    // Set to 'true' to show the transitions menu panel with
-                                                    // the default transitions list. Alternatively, provide an
-                                                    // array to specify the transitions to make available in
-                                                    // the transitions panel, for example...
-                                                    // ['None', 'Fade', 'Slide']
-                                                    transitions: false,
+                                                // Specifies if the transitions menu panel will be shown.
+                                                // Set to 'true' to show the transitions menu panel with
+                                                // the default transitions list. Alternatively, provide an
+                                                // array to specify the transitions to make available in
+                                                // the transitions panel, for example...
+                                                // ['None', 'Fade', 'Slide']
+                                                transitions: false,
 
-                                                        // Adds a menu button to the slides to open the menu panel.
-                                                        // Set to 'false' to hide the button.
-                                                        openButton: true,
+                                                    // Adds a menu button to the slides to open the menu panel.
+                                                    // Set to 'false' to hide the button.
+                                                    openButton: true,
 
-                                                            // If 'true' allows the slide number in the presentation to
-                                                            // open the menu panel. The reveal.js slideNumber option must 
-                                                            // be displayed for this to take effect
-                                                            openSlideNumber: false,
+                                                        // If 'true' allows the slide number in the presentation to
+                                                        // open the menu panel. The reveal.js slideNumber option must 
+                                                        // be displayed for this to take effect
+                                                        openSlideNumber: false,
 
-                                                                // If true allows the user to open and navigate the menu using
-                                                                // the keyboard. Standard keyboard interaction with reveal
-                                                                // will be disabled while the menu is open.
-                                                                keyboard: true,
+                                                            // If true allows the user to open and navigate the menu using
+                                                            // the keyboard. Standard keyboard interaction with reveal
+                                                            // will be disabled while the menu is open.
+                                                            keyboard: true,
 
-                                                                    // Normally the menu will close on user actions such as
-                                                                    // selecting a menu item, or clicking the presentation area.
-                                                                    // If 'true', the sticky option will leave the menu open
-                                                                    // until it is explicitly closed, that is, using the close
-                                                                    // button or pressing the ESC or m key (when the keyboard 
-                                                                    // interaction option is enabled).
-                                                                    sticky: false,
+                                                                // Normally the menu will close on user actions such as
+                                                                // selecting a menu item, or clicking the presentation area.
+                                                                // If 'true', the sticky option will leave the menu open
+                                                                // until it is explicitly closed, that is, using the close
+                                                                // button or pressing the ESC or m key (when the keyboard 
+                                                                // interaction option is enabled).
+                                                                sticky: false,
 
-                                                                        // If 'true' standard menu items will be automatically opened
-                                                                        // when navigating using the keyboard. Note: this only takes 
-                                                                        // effect when both the 'keyboard' and 'sticky' options are enabled.
-                                                                        autoOpen: true,
+                                                                    // If 'true' standard menu items will be automatically opened
+                                                                    // when navigating using the keyboard. Note: this only takes 
+                                                                    // effect when both the 'keyboard' and 'sticky' options are enabled.
+                                                                    autoOpen: true,
 
-                                                                            // If 'true' the menu will not be created until it is explicitly
-                                                                            // requested by calling RevealMenu.init(). Note this will delay
-                                                                            // the creation of all menu panels, including custom panels, and
-                                                                            // the menu button.
-                                                                            delayInit: false,
+                                                                        // If 'true' the menu will not be created until it is explicitly
+                                                                        // requested by calling RevealMenu.init(). Note this will delay
+                                                                        // the creation of all menu panels, including custom panels, and
+                                                                        // the menu button.
+                                                                        delayInit: false,
 
-                                                                                // If 'true' the menu will be shown when the menu is initialised.
-                                                                                openOnInit: false,
+                                                                            // If 'true' the menu will be shown when the menu is initialised.
+                                                                            openOnInit: false,
 
-                                                                                    // By default the menu will load it's own font-awesome library
-                                                                                    // icons. If your presentation needs to load a different
-                                                                                    // font-awesome library the 'loadIcons' option can be set to false
-                                                                                    // and the menu will not attempt to load the font-awesome library.
-                                                                                    loadIcons: false
-        },
-        chalkboard: {
-            toggleChalkboardButton: { left: "60px", bottom: "30px", top: "auto", right: "auto" },
-            toggleNotesButton: { left: "90px", bottom: "30px", top: "auto", right: "auto" },
+                                                                                // By default the menu will load it's own font-awesome library
+                                                                                // icons. If your presentation needs to load a different
+                                                                                // font-awesome library the 'loadIcons' option can be set to false
+                                                                                // and the menu will not attempt to load the font-awesome library.
+                                                                                loadIcons: false
+    },
+    chalkboard: {
+        toggleChalkboardButton: { left: "60px", bottom: "30px", top: "auto", right: "auto" },
+        toggleNotesButton: { left: "90px", bottom: "30px", top: "auto", right: "auto" },
 
-        }
-        */
+    }
     });
 
+
+
 </script>
-
-
 </body>
 
 </html>
