@@ -3,5 +3,9 @@
     "eslint.enable": true,
     "revealjs.slideExplorerEnabled": true,
     "markdown.extension.toc.githubCompatibility": true,
-    "github-enterprise.uri": "https://github.com/dllido/EI1036_42"
+    "github-enterprise.uri": "https://github.com/dllido/EI1036_42",
+    "revealjs.exportHTMLPath": "./export0",
+    "revealjs.highlightTheme": "Default",
+    "revealjs.parallaxBackgroundSize": "2100px 900px",
+    "revealjs.previewLinks": true
 }
