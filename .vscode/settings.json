@@ -5,7 +5,14 @@
     "markdown.extension.toc.githubCompatibility": true,
     "github-enterprise.uri": "https://github.com/dllido/EI1036_42",
     "revealjs.exportHTMLPath": "./export0",
-    "revealjs.highlightTheme": "Default",
+    "revealjs.highlightTheme": "Darkula",
     "revealjs.parallaxBackgroundSize": "2100px 900px",
-    "revealjs.previewLinks": true
+    "revealjs.previewLinks": true,
+    "revealjs.parallaxBackgroundHorizontal": 10,
+    "revealjs.parallaxBackgroundVertical": 10,
+    "revealjs.theme": "sky",
+    "revealjs.backgroundTransition": "fade",
+    "revealjs.browserPath": "",
+    "markdown.extension.print.absoluteImgPath": false,
+    "revealjs.transition": "fade"
 }

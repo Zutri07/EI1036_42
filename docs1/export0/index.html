@@ -1,0 +1,1378 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>title</title>
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- REVEAL CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="libs/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="libs/reveal.js/dist/reveal.css">
+  
+  <link rel="stylesheet" href="libs/reveal.js/dist/theme/sky.css" id="theme">
+  
+  
+  <!--
+  <link rel="stylesheet" href="libs/reveal.js/plugin/title-footer/title-footer-mod.css" />
+  -->
+
+  <!-- MERMAID-->
+  <!--
+  <script src="libs/reveal.js/plugin/mermaid/mermaid.min.js"></script>
+  <style>
+  .mermaid {
+    font-size: 0.5em;
+  }
+  </style>
+  -->
+  
+  <style>
+    [class*=task-list-item] {
+      min-height: 22px;
+      margin-top: 6px!important;
+      margin-bottom: 6px!important;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    [class*=task-list-item]>input:first-child {
+      position: absolute!important;
+      opacity: 0;
+      margin: 0;
+    }
+
+    [class*=task-list-item]>label {
+      padding-left: 29px!important;
+      min-height: 22px;
+      line-height: 22px;
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      margin-bottom: 0;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .task-list-item>input:first-child:checked+input[type=hidden]+label::before, .task-list-item>input:first-child:checked+label::before {
+      background-color: #ecf0f1;
+      border-color: #ecf0f1;
+    }
+
+    [class*=task-list-item]>input:first-child+input[type=hidden]+label::before, [class*=task-list-item]>input:first-child+label::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border: 1px solid #D3CFC8;
+      border-radius: 0;
+      margin-left: -29px;
+    }
+
+    [class*=task-list-item]>input:first-child:checked+input[type=hidden]+label::after, [class*=task-list-item]>input:first-child:checked+label::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 7px;
+      height: 10px;
+      border: 2px solid #fff;
+      border-left: none;
+      border-top: none;
+      transform: translate(7.75px,4.5px) rotate(45deg);
+      -ms-transform: translate(7.75px,4.5px) rotate(45deg);
+    }
+
+    .task-list-item>input:first-child:checked+input[type=hidden]+label::after, .task-list-item>input:first-child:checked+label::after {
+      border-bottom-color: #95a5a6;
+      border-right-color: #95a5a6;
+    }
+  </style>
+
+  <!-- Theme used for syntax highlighting of code -->
+  
+  <link rel="stylesheet" href="libs/reveal.js/plugin/highlight/Darkula.css">
+  
+
+  
+  
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'libs/reveal.js/dist/print/pdf.css' : 'libs/reveal.js/dist/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <style>
+     .line {
+      display: block;
+    }   
+
+    .line.focus {
+      background: #fdf6e3;
+      color: #657b83;
+    }
+
+    .reveal .slides section .fragment.current-only {
+      visibility: visible;
+      display: none;
+    }
+
+    .reveal .slides section .fragment.current-only.current-fragment {
+      display: block;
+    }
+
+    .line.focus {
+       opacity: 1.0;
+    } 
+
+    @media (device-width: 100vw) and (device-height: 100vh) {
+      .reveal pre code {
+        max-height: 50vh !important;
+      }
+    }
+
+    #logo img {
+      max-height: 3.5em;
+      max-width: none;
+      min-width: 50px;
+    }
+
+    .reveal .slides section .code-presenting-annotation {
+      color: white;
+      background: black;
+      padding: 0px 15px;
+      border-radius: 15px;
+      opacity: 0.75 !important;
+      font-size: 50% !important;
+    }
+  </style>
+  <script>
+    if (window.location.search.match(/print-pdf-now/gi)) {
+      window.print();
+    }
+  </script>
+</head>
+
+<body>
+  
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+  
+    <section >
+      <link rel="stylesheet" href="lola_theme.css">   
+<h1><a id="user-content-tema-3-lenguajes-de-la-web" class="anchor" href="#tema-3-lenguajes-de-la-web" aria-hidden="true"></a>Tema 3: Lenguajes de la Web</h1>
+<h1><a id="user-content-html5-css3" class="anchor" href="#html5-css3" aria-hidden="true"></a>(HTML5, CSS3)</h1>
+<p><em>EI1042 - Tecnologías y Aplicaciones Web</em></p>
+<p><strong>EI1036- Tecnologías Web para los Sistemas de Información (2020/2021)</strong></p>
+<p>Professora: Dra. Dolores Mª Llidó Escrivá y Dr. Rafael Berlanga Llavori</p>
+<p><img src="./media/cc2.jpg" alt="Derechos Autor">
+<a href="https://www.uji.es/">Universitat Jaume I</a>.</p>
+
+    </section>
+  
+
+  
+    <section >
+      <h1><a id="user-content-índice" class="anchor" href="#índice" aria-hidden="true"></a>Índice</h1>
+<ol>
+<li>HTML: HyperText Markup Language</li>
+<li>Renderizado HTML</li>
+<li>Accesibilidad/usabilidad</li>
+<li>HTML5</li>
+<li>Estructura Semántica</li>
+<li>Formularios</li>
+<li>CSS: Sintaxis CSS</li>
+<li>Tipos selectores</li>
+<li>Medidas/Unidades</li>
+<li>CSS3</li>
+<li>Modelo de Cajas: flotantes/flexibles</li>
+<li>Discriminación por dispositivos.
+<ul>
+<li>Media-Type</li>
+<li>Media-Queries</li>
+</ul>
+</li>
+<li>Bibliografía</li>
+</ol>
+
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-1-html-hypertext-markup-language" class="anchor" href="#1-html-hypertext-markup-language" aria-hidden="true"></a>1 HTML: HyperText Markup Language</h1>
+<ul>
+<li>Lenguaje de marcas para publicar documentos multimedia
+hipertexto.</li>
+<li>Los documentos HTML son ficheros de texto con marcas de formato
+que son independientes del SO, lenguaje de programación y
+programas.</li>
+<li>Las marcas o etiquetas indican cómo representar los
+contenidos de los documentos.
+<ul>
+<li>Elemento con contenido:  <code>&lt;html&gt;...&lt;/html&gt;</code></li>
+<li>Elemento vacío: <code>&lt;br/&gt;</code> o <code>&lt;br&gt;&lt;/br&gt;</code></li>
+<li>Etiqueta con atributos:<br>
+<code>&lt;body class=&quot;principal&quot;&gt;...&lt;/body&gt;</code></li>
+</ul>
+</li>
+<li>Extensiones de fichero: .html o .htm</li>
+<li>Cuestiones de estilo: etiquetas en minúsculas y atributos entre comillas dobles (XML).</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h1><a id="user-content-conceptos" class="anchor" href="#conceptos" aria-hidden="true"></a>Conceptos:</h1>
+<ul>
+<li>¿Qué es el <em>encoding</em>? (Editor/Navegador)</li>
+<li>¿Cómo especificamos que el documento HTML está en español?</li>
+<li>¿Qué es el mimetype?</li>
+<li>¿Qué son los carácteres especiales en HTML?</li>
+</ul>
+<pre><code>&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;!-- por defecto es utf-8 --&gt;
+    &lt;style&gt; p {color: blue} &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;p&gt; This &amp;amp; That &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        </section>
+      
+        <section >
+          <p><img src="./media/T3/image4.png" alt="Image of HTML"></p>
+<p><a href="https://ontargetwebsolutions.com/insights/wp-content/uploads/2014/11/evolution-of-web-design-ok.jpg">https://ontargetwebsolutions.com/insights/wp-content/uploads/2014/11/evolution-of-web-design-ok.jpg</a></p>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-2-renderizado-html" class="anchor" href="#2-renderizado-html" aria-hidden="true"></a>2. Renderizado HTML</h1>
+<p>¿Qué es el renderizado?</p>
+<ul>
+<li>
+<p>Los documentos HTML pueden ser renderizados en pantallas, sintetizadores de habla y dispositivos
+de Braille.</p>
+</li>
+<li>
+<p>Para indicar cómo aparece el renderizado se ha definido el <em>CSS</em><br>
+(Cascade Style Sheet).</p>
+</li>
+<li>
+<p>Cuando un documento HTML se renderiza se guarda en la memoria como un árbol <em>DOM</em> (Document Object
+Model).</p>
+</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-renderizado-básico-en-el-navegador-blokinline" class="anchor" href="#renderizado-básico-en-el-navegador-blokinline" aria-hidden="true"></a>Renderizado básico en el navegador: Blok/Inline</h2>
+<p>Los elementos HTML se dividen en dos grandes tipos:</p>
+<ul>
+<li><code>block</code>: tienden a ocupar todo el espacio disponible a lo ancho y, en
+caso de existir varios elementos, se sitúan unos debajo de otros (p, aside,
+footer, div, table, etc.).</li>
+<li><code>inline</code>: ocupan el espacio necesario dentro de una línea y en caso
+de existir varios elementos se sitúan uno junto a otro en la misma línea
+siempre que haya espacio (span, a, etc.)</li>
+</ul>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section >
+      <h1><a id="user-content-3-recomendaciones-accesibilidad-y-usabilidad" class="anchor" href="#3-recomendaciones-accesibilidad-y-usabilidad" aria-hidden="true"></a>3 Recomendaciones: Accesibilidad y Usabilidad</h1>
+<ul>
+<li>Etiquetas y atributos en minúsculas.</li>
+<li>Organización lógica del documento según estándar: h1, h2, h3, …</li>
+<li>No usar tablas (<code>&lt;table&gt;</code>) para estructurar la página.</li>
+<li>Intentar que sin el estilo <em>CSS</em> se pueda entender el contenido.</li>
+<li>Resaltar los textos tanto con forma y color distintos.</li>
+<li>No utilizar espacios en blanco consecutivos, mejor usa <code> css margin</code></li>
+<li>Uso preferente de etiquetas semánticas <code>header, article....</code> frente a <code>div</code></li>
+</ul>
+
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-4-html-5" class="anchor" href="#4-html-5" aria-hidden="true"></a>4. HTML 5:</h1>
+<p><a href="http://www.w3.org/TR/html5/">http://www.w3.org/TR/html5/</a></p>
+<p><a href="https://HTML.spec.whatwg.org/multipage/indices.HTML">https://HTML.spec.whatwg.org/multipage/indices.HTML</a></p>
+<ul>
+<li>Comienza con la definición del Doctype <code>&lt;!DOCTYPE html&gt;</code>.</li>
+<li>Elementos obligatorios: <code>html, head, title y body</code></li>
+<li>Validadores: <a href="http://validator.w3.org">http://validator.w3.org</a> o
+<a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a></li>
+<li><a href="http://caniuse.com">http://caniuse.com</a> ¿Qué etiquetas puedo usar en los
+navegadores?</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-elementos-html5-multimedia" class="anchor" href="#elementos-html5-multimedia" aria-hidden="true"></a>Elementos HTML5 multimedia</h2>
+<ul>
+<li>Audio: <code>&lt;audio src=&quot; ... &quot; &gt;&lt;/audio&gt;</code></li>
+<li>Vídeo: <code>&lt;video src=&quot; ... &quot;&gt;&lt;/video&gt;</code></li>
+<li>Animación: <code>&lt;canvas&gt;&lt;/canvas&gt; </code>(+ JavaScript)</li>
+<li>Soporte Imágenes vectoriales: SVG (scalable vector graphics)</li>
+</ul>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-5-estructura-semántica" class="anchor" href="#5-estructura-semántica" aria-hidden="true"></a>5. Estructura Semántica</h1>
+<pre><code class="language-html">&lt;header&gt; &lt;hgroup&gt;
+&lt;h1&gt;Page title&lt;/h1&gt;
+&lt;h2&gt;Page subtitle&lt;h2&gt;
+&lt;/hgroup&gt; &lt;/header&gt;
+&lt;nav&gt;
+   &lt;ul&gt;
+     &lt;li&gt; Navigation...
+   &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;section&gt; &lt;article&gt;
+   &lt;header&gt;&lt;h1&gt;Title&lt;h1&gt; &lt;/header&gt;
+   Content...
+   &lt;/article&gt;
+   &lt;article&gt;
+     ....
+   &lt;/article&gt;
+&lt;/section&gt;
+&lt;aside&gt;
+   Top links...
+   &lt;figure&gt; &lt;img src=&quot;...&quot;/&gt;
+   &lt;figcaption&gt;Chart&lt;/figcaption&gt; &lt;/figure&gt;
+&lt;/aside&gt;
+&lt;footer&gt;
+   Copyright © &lt;time datetime=&quot;2010-11-08&quot;&gt;2010&lt;/time&gt;.
+&lt;/footer&gt;
+</code></pre>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-html5-estructura-semántica" class="anchor" href="#html5-estructura-semántica" aria-hidden="true"></a>HTML5: Estructura Semántica</h2>
+<ul>
+<li><code>&lt;p&gt;</code>: Mínimo bloque en HTML.</li>
+<li><code>&lt;div&gt;</code>: Une bloques de distintos tipos, cuando no podemos asociar significado
+semántico a este conjunto.</li>
+<li><code>&lt;header&gt;</code> : Encabezado de la página.</li>
+<li><code>&lt;footer&gt;</code>: Pie de página.</li>
+<li><code>&lt;nav&gt;</code>: Menú de navegación.</li>
+<li><code>&lt;hgroup&gt;</code>: Agrupación titulares (Hn).</li>
+<li><code>&lt;article&gt;</code>: Elementos con significado propio.Puede contener :
+<ul>
+<li><code>&lt;header&gt;, &lt;section&gt;, &lt;aside&gt; y &lt;footer&gt;</code>.</li>
+<li>Puede ser un documento entero.</li>
+</ul>
+</li>
+<li><code>&lt;section&gt;</code>: declaramos que el conjunto de etiquetas tiene un
+contenido relacionado. Equivalente a una sección de un periódico que engloba varios artículos.</li>
+<li><code>&lt;aside&gt;:</code> bloque que es sólo un añadido a los bloques que tiene
+al lado (ej.- anuncios). Son datos extra sin lo que podríamos
+pasar perfectamente pero que hemos decidido añadir en el
+documento.</li>
+</ul>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-6-formularios-html-dinámico" class="anchor" href="#6-formularios-html-dinámico" aria-hidden="true"></a>6. Formularios: HTML DINÁMICO</h1>
+<ul>
+<li>¿Qué entendesis por página dinámica?</li>
+<li>¿Cómo creais páginas dinámicas?</li>
+<li>¿Cómo funcionan los formularios?</li>
+<li>¿Conoceis alguna alternativa a los formularios?</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-atributos--form" class="anchor" href="#atributos--form" aria-hidden="true"></a>Atributos  Form</h2>
+<p><code>&lt;form id=&quot;identificador&quot; action=&quot;programa&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</code></p>
+<ul>
+<li><code>method</code> : get(defecto)/post</li>
+<li><code>action</code> (obligatorio) : Indica la URL o función JS que procesará la
+información del formulario.</li>
+<li><code>enctype</code>: El tipo mime empleado para codificar el contenido del
+formulario.
+<a href="https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types">https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types</a></li>
+</ul>
+<pre><code class="language-html">&lt;form action=&quot;javascript:console.log(this.fname.value);&quot;&gt;
+  &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;
+  &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+
+        </section>
+      
+        <section >
+          <h2><a id="user-content-etiquetas-de-los-formularios" class="anchor" href="#etiquetas-de-los-formularios" aria-hidden="true"></a>Etiquetas de los formularios</h2>
+<ul>
+<li>
+<p>Input</p>
+</li>
+<li>
+<p>Select</p>
+</li>
+<li>
+<p>Textarea</p>
+</li>
+<li>
+<p>Button</p>
+</li>
+</ul>
+<p><a href="http://www.w3.org/TR/html5/forms.html">http://www.w3.org/TR/html5/forms.html</a></p>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-7-css-cascade-style-sheets" class="anchor" href="#7-css-cascade-style-sheets" aria-hidden="true"></a>7. CSS: Cascade Style Sheets</h1>
+<ul>
+<li>
+<p>HTML utiliza un conjunto de etiquetas predefinidas, cuyo
+significado es bien conocido. Un navegador sabe cómo debe
+mostrar estos elementos al usuario.<br>
+<code>h2 {color:blue;}</code></p>
+</li>
+<li>
+<p>Las CSS (Cascade Style Sheets): son un conjunto de distintas
+reglas de estilo unidas a un documento que permiten definir
+estilos para mostrar a los elementos de HTML</p>
+<p>[<a href="https://www.w3c.es/Divulgacion/GuiasReferencia/CSS21">https://www.w3c.es/Divulgacion/GuiasReferencia/CSS21</a>]</p>
+</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-css-en-navegadores" class="anchor" href="#css-en-navegadores" aria-hidden="true"></a>CSS: En navegadores</h2>
+<p>¿Por qué no son iguales los documentos HTML en todos los
+navegadores?</p>
+<ul>
+<li>Los navegadores tienen su propio conjunto de reglas de
+estilo.</li>
+<li>Los navegadores no soportan el estándar CSS 100%</li>
+</ul>
+
+        </section>
+      
+        <section >
+          <h2><a id="user-content-css-ventajas" class="anchor" href="#css-ventajas" aria-hidden="true"></a>CSS: Ventajas</h2>
+<ul>
+<li>Separar el contenido del formato.</li>
+<li>Reducir el tiempo de descarga.</li>
+<li>Dar más control sobre el renderizado de HTML.</li>
+<li>Utilizar un mismo estilo para todo el
+portal web para que tenga una apariencia uniforme  y consistente.</li>
+<li>Cada usuario pueden aplicar
+sus propias reglas de estilo.</li>
+<li>Las reglas se aplican de forma jerárquica o en cascada.</li>
+<li>Se combinan reglas del navegador con las del diseñador</li>
+</ul>
+
+        </section>
+      
+        <section >
+          <h2><a id="user-content-css-sintaxis" class="anchor" href="#css-sintaxis" aria-hidden="true"></a>CSS: Sintaxis</h2>
+<p>Una regla de estilo se compone de:</p>
+<ul>
+<li>Selector: enlace entre el documento HTML y el estilo</li>
+<li>Declaración: describe el efecto de la regla</li>
+</ul>
+<p><code>selector1, selector2 {prop1:value1; prop2:value2;...}</code></p>
+<pre><code class="language-css">   h1 {color:blue} 
+   h1,h2,h3 {color:blue; tex-align:center}
+</code></pre>
+
+        </section>
+      
+        <section >
+          <h2><a id="user-content-¿cómo-se-enlaza-css-con-html" class="anchor" href="#¿cómo-se-enlaza-css-con-html" aria-hidden="true"></a>¿Cómo se enlaza CSS con HTML?</h2>
+<ul>
+<li>Dentro de la definición de etiquetas en el HTML (No abusar)</li>
+</ul>
+<pre><code class="language-html"> &lt;b style=&quot;font-size:14pt;color:red&quot;&gt;...&lt;/b&gt; 
+</code></pre>
+<ul>
+<li>En HTML dentro de la cabecera: etiqueta <code>&lt;style&gt;</code></li>
+</ul>
+<pre><code class="language-html">&lt;style type=&quot;text/css&quot;&gt;
+  body { color: purple; background-color: #d8da3d}
+&lt;/style&gt;
+</code></pre>
+<ul>
+<li>En ficheros externos .css e importarlos:<code>&lt;link&gt;/@import</code></li>
+</ul>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot;
+type=&quot;text/css&quot;
+href=&quot;splash.css&quot;&gt;
+</code></pre>
+<pre><code class="language-html">&lt;style type=&quot;text/css&quot;&gt;
+  @import url(externo.css);
+  h1 {color: gray;}
+&lt;/style&gt;
+</code></pre>
+<p>¿Prioridad de las reglas?</p>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-8-tipos-de-selectores" class="anchor" href="#8-tipos-de-selectores" aria-hidden="true"></a>8. Tipos de selectores</h1>
+<pre><code class="language-html">&lt;h1&gt;Directorio1&lt;/h1&gt;
+&lt;div id=&quot;directorio&quot;&gt;
+   &lt;h2&gt;Directorio1.2&lt;/h2&gt;
+   &lt;h2&gt;Directorio1.3&lt;/h2&gt;
+   &lt;p class=&quot;cita&quot;&gt;En en lugar de la mancha...&lt;/p&gt;
+   &lt;aside class=&quot;cita&quot;&gt; Referencia Miguel &lt;/aside&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>Etiquetas:</li>
+</ul>
+<pre><code class="language-css">h1 {color:blue}
+</code></pre>
+
+      </section>
+      
+        <section >
+          <ul>
+<li>Identificador de elemento (atributo <code>id</code>):</li>
+</ul>
+<pre><code class="language-css">#directorio {
+position: absolute;
+left: 0px;
+top: 70px;
+background: red;
+width: 20%; 
+}
+</code></pre>
+<ul>
+<li>Clases de elementos (atributo <code>class</code>):</li>
+</ul>
+<pre><code class="language-css">.cita {font-weight: bold; color: red;}
+p.cita {background-color: red;}
+</code></pre>
+
+        </section>
+      
+        <section >
+          <h2><a id="user-content-tipos-de-selectores" class="anchor" href="#tipos-de-selectores" aria-hidden="true"></a>Tipos de selectores</h2>
+<ul>
+<li>
+<p>Pseudo-Clases :</p>
+<ul>
+<li>:link cualquier enlace no visitado de la página.</li>
+<li>:visited cualquier enlace ya visitado de la página.</li>
+<li>:active enlace en el que estamos en este momento.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-css">a:visited  {color: gray;}
+</code></pre>
+<ul>
+<li>Pseudo-Elementos</li>
+</ul>
+<pre><code class="language-css">p:first-letter {color: red;}
+p:first-line {color: gray;}
+</code></pre>
+<ul>
+<li>En función del contexto</li>
+</ul>
+<pre><code class="language-css">td b {color:green}
+ul b {color:#074A}
+</code></pre>
+<p>El atributo Color del CSS soporta nombre inglés o HEXA, RGB y HSL</p>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-9-unidades-css" class="anchor" href="#9-unidades-css" aria-hidden="true"></a>9. Unidades CSS</h1>
+<ul>
+<li>Medidas relativas:
+<ul>
+<li><code>em</code> (ems, “font-size” o tamaño de la fuente)</li>
+<li><code>ex</code> (x-height, altura de la letra “x” minúscula)</li>
+<li><code>px</code> (pixels, relativa a la resolución de pantalla)</li>
+</ul>
+</li>
+<li>Medidas absolutas:
+<ul>
+<li><code>in</code> (pulgadas; 1in=2.54cm)</li>
+<li><code>cm</code> (centímetros; 1cm=10mm)</li>
+<li><code>mm</code> (milímetros)</li>
+<li><code>pt</code> (puntos tipográficos; 1pt=1/72in)</li>
+<li><code>pc</code> (picas; 1pc=12pt)</li>
+</ul>
+</li>
+<li>Unidades de medida relativas:
+<ul>
+<li>Porcentajes : margin-left:20%
+margen izquierdo de un 20% del ancho del elemento contenedor</li>
+<li>Proporcionales: margin-left:3*
+margen izquierdo de ¾ partes del elemento contenedor</li>
+</ul>
+</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-tamaño-de-la-fuente-font-size" class="anchor" href="#tamaño-de-la-fuente-font-size" aria-hidden="true"></a>Tamaño de la fuente: Font-size</h2>
+<ul>
+<li>Absolutos:
+[ xx-small | x-small | small |medium |large | x-large
+| xx-large ]</li>
+<li>Relativos:
+[larger | smaller]</li>
+</ul>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h2><a id="user-content-ejercicio-1" class="anchor" href="#ejercicio-1" aria-hidden="true"></a>Ejercicio 1</h2>
+<ul>
+<li>
+<p>Buscando en estas guías <a href="https://www.w3.org/community/webed/wiki/CSS">https://www.w3.org/community/webed/wiki/CSS</a></p>
+</li>
+<li>
+<p>Programando en  <a href="https://codepen.io/martinwolf/pen/qlFdp">https://codepen.io/martinwolf/pen/qlFdp</a></p>
+</li>
+<li>
+<p>Convierte un hiperenlace en un botón con una clase enlaceBoton. Usando las reglas de background y border.</p>
+</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-ejercicio-2" class="anchor" href="#ejercicio-2" aria-hidden="true"></a>Ejercicio 2</h2>
+<ul>
+<li>
+<p>Crea un pequeño formulario para registrarse en un gimnasio que utilice:</p>
+<ul>
+<li>
+<p>campos <em>nombre</em> y <em>DNI</em> con <code>input type=&quot;text&quot;</code></p>
+</li>
+<li>
+<p>campo <em>sexo</em> con <code>input type=radio</code></p>
+</li>
+<li>
+<p>campo <em>fecha</em>  con un  <code>input type=&quot;date&quot;</code></p>
+</li>
+<li>
+<p>campo <em>deportes</em> con <code>select multiple</code>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Trata de encontrar una solución consultando la guia de HTML y CSS poner más atributos a estos campos y con el mejorar la apariencia del formulario. Por ejemplo una imagen de fondo al formulario, los textos con el tamaño requerido y con una fuente de distintos colores… Además usa para los campos obligatorios el utiliza el  atributo “required”</p>
+<p>¿Que parámetros se envian al servidor?</p>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-10-css3" class="anchor" href="#10-css3" aria-hidden="true"></a>10. CSS3</h1>
+<ul>
+<li>Transformaciones</li>
+<li>Transiciones</li>
+<li>Animaciones</li>
+<li>Fuentes propias</li>
+<li>Columnas</li>
+<li>Transparencia</li>
+<li>Degradados</li>
+<li>Bordes redondeados</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-ejemplos-css3" class="anchor" href="#ejemplos-css3" aria-hidden="true"></a>Ejemplos CSS3</h2>
+<pre><code class="language-html">&lt;style&gt;
+  #gira:hover {
+  transform:rotate(-30deg); }
+&lt;/style&gt;
+
+&lt;p id=&quot;gira&quot; &gt;Esto hace algo &lt;a href=&quot;#&quot;&gt; Acción CSS3Transform&lt;/a&gt;
+ Se ve o no se ve.&lt;p&gt; 
+</code></pre>
+<style>
+  #gira:hover {
+  transform:rotate(-30deg); }
+</style>
+<p id="gira" >Esto hace algo <a href="#"> Acción CSS3Transform</a>
+ Se ve o no se ve.<p>
+<p>Más ejemplos:
+<a href="http://estelle.github.io/animation/30.html#slide1">http://estelle.github.io/animation/30.html#slide1</a></p>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-11-modelo-de-cajas" class="anchor" href="#11-modelo-de-cajas" aria-hidden="true"></a>11. Modelo de Cajas</h1>
+<ul>
+<li>
+<p>Los elementos HTML se dividen en dos grandes tipos: block e inline.</p>
+</li>
+<li>
+<p>La propiedad <code>display</code> nos permite alterar el tipo de caja con
+que se muestra un elemento.</p>
+<ul>
+<li><code>inline</code>: el elemento no es un bloque, se renderiza en linea con otros elementos de ese tipo.</li>
+<li><code>block</code> : el elemento se comporta como un bloque, podemos poner márgenes y bordes…</li>
+<li><code>none</code> : el elemento no se muestra; el efecto es como si no existiera, por lo que su espacio será ocupado por otros.</li>
+<li><code>inherit</code> : se heredan las características del elemento padre.</li>
+<li><code>flex</code> : el elemento es flexible en posición horizontal y vertical.</li>
+<li><code>inline-block</code> : el elemento de bloque pero que se renderiza en línea con otros elementos.</li>
+</ul>
+</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-ejemplo" class="anchor" href="#ejemplo" aria-hidden="true"></a>Ejemplo</h2>
+<pre><code class="language-html">&lt;p&gt; Esto es un párrafo, elemento block por defecto que contiene un trozo de texto &lt;span&gt; SPAN &lt;/span&gt; que por defecto es inline&lt;/p&gt;
+&lt;a href=&quot;aqui&quot; style=&quot;display:block; border: solid 4px rgb(204, 0, 0) ; background : #ffeebb ; &quot;&gt; Hiperenlace que  ya no es inline, es block.&lt;/a&gt;
+&lt;p&gt;Hiperenlace &lt;a href=&quot;alli&quot; style=&quot;display:inline-block; border: solid 4px rgb(204, 0, 0) ; background : #ffeebb ; &quot;&gt;Alli&lt;/a&gt; ,que es una caja inline, no es block&lt;/p&gt;
+</code></pre>
+<p> Esto es un párrafo, elemento block por defecto que contiene un trozo de texto <span> SPAN </span> que por defecto es inline</p>
+<a href="aqui" style="display:block; border: solid 4px rgb(204, 0, 0) ; background : #ffeebb ; "> Hiperenlace que  ya no es inline, es block.</a>
+<p>Hiperenlace <a href="alli" style="display:inline-block; border: solid 4px rgb(204, 0, 0) ; background : #ffeebb ; ">Alli</a> ,que es una caja inline, no es block</p>
+
+        </section>
+      
+        <section >
+          <h2><a id="user-content-propiedades-de-las-cajas" class="anchor" href="#propiedades-de-las-cajas" aria-hidden="true"></a>Propiedades de las cajas</h2>
+<pre><code class="language-css">header, footer {
+   display: block;
+   margin: 4px;
+   padding: 5px;
+   min-height: 100px;
+   border: 1px solid #eebb55;
+   border-radius: 7pt;
+   background: #ffeebb;
+}
+</code></pre>
+<img src="./media/T3/image5.gif"/>
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h2><a id="user-content-propiedad-overflow" class="anchor" href="#propiedad-overflow" aria-hidden="true"></a>Propiedad overflow</h2>
+<p>Propiedad que especifica que hacer con el contenido excedente en un elemento a nivel de bloque</p>
+<p><code>overflow: scroll </code></p>
+<ul>
+<li><code>visible</code> (por defecto): Contenido no  recortado, podría ser dibujado fuera de la caja contenedora.</li>
+<li><code>hidden</code>: Contenido  recortado.</li>
+<li><code>scroll</code>: Contenido  recortado y el Navegador, usa  barras de desplazamiento.</li>
+<li><code>auto</code>: Depende del Navegador.</li>
+</ul>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-elipsis-texto" class="anchor" href="#elipsis-texto" aria-hidden="true"></a>Elipsis texto</h2>
+<pre><code class="language-html">&lt;div id=&quot;container&quot;&gt;
+  &lt;p class=&quot;truncate&quot; &gt;This is a text that should be truncated because it's too long.  The dreams of yesterday are the hopes of today and the reality of tomorrow. Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species. Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon. Buy why, some say, the moon? Why choose this as our goal? And they may as well ask why climb the highest &lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.truncate:hover {
+  
+  white-space: normal;
+  overflow:visible;
+
+   }
+</code></pre>
+
+        </section>
+      
+        <section >
+          <h3><a id="user-content-modelo-de-cajas-position" class="anchor" href="#modelo-de-cajas-position" aria-hidden="true"></a>Modelo de cajas: <code>Position</code></h3>
+<ul>
+<li><code>Static:</code> Posición predeterminada en HTML.</li>
+<li><code>Relative:</code> La posición de la caja se ajusta en relación a su posición
+normal dentro de la página. La caja siguiente se sitúa como si esta
+no se hubiera desplazado.</li>
+<li><code>Absolute:</code> Las cajas son quitadas del flujo normal, su posición se
+especifica con las propiedades ‘left’, ‘right’, ‘top’, y ‘bottom’. No
+tienen ninguna influencia sobre la posición de las cajas siguientes.</li>
+<li><code>Fixed:</code> Como el anterior, pero se posiciona en función de la ventana
+del navegador. Esta caja no se mueve de posición al hacer scroll.</li>
+</ul>
+<pre><code class="language-css">#dos{
+   display:block;
+   position: absolute;
+   top: 150px;
+   padding: 5px 5px 5px 5px;
+   Margin: 5px auto; /*centrar*/
+   border-style: solid; 
+}
+&lt;div id=&quot;uno&quot;&gt;uno&lt;/div&gt;
+&lt;div id=&quot;dos&quot;&gt;dos&lt;/div&gt;
+</code></pre>
+<style>
+#dos {
+display:block;
+position: absolute;
+top: 150px;
+padding: 5px 5px 5px 5px;
+Margin: 5px auto; /*centrar*/
+border-style: solid; }
+</style>
+<div id="uno">uno</div>
+<div id="dos">dos</div>
+        </section>
+      
+        <section >
+          <h3><a id="user-content-cajas-flotantes-float" class="anchor" href="#cajas-flotantes-float" aria-hidden="true"></a>Cajas Flotantes: <code>Float</code></h3>
+<ul>
+<li><code>Left</code> : Genera un bloque a la izquierda donde posicionar las
+siguientes cajas si caben. De modo que el contenido de la caja
+se posiciona a la izquierda arriba de ese bloque.</li>
+<li><code>Right</code> : Lo mismo a la izquierda</li>
+<li><code>None</code> : No deja elementos flotantes.</li>
+</ul>
+<pre><code class="language-css">&lt;style&gt;
+#dos0 {float:right; border-style:solid;}
+#uno0 {float:left;  border-style:solid;}
+&lt;/style&gt;
+&lt;div id=&quot;uno0&quot;&gt;uno1&lt;/div&gt;
+&lt;div id=&quot;dos0&quot;&gt;dos1&lt;/div&gt;
+</code></pre>
+<p>Si al lado ponemos un parrafo este se alinea
+a la derecha de la imagen.</p>
+<style>
+#dos0 {float:right; border-style: solid;}
+#uno0 {float: left; border-style: solid;}
+</style>
+<div id="uno0">uno1</div>
+<div id="dos0">dos1</div>
+        </section>
+      
+        <section >
+          <h3><a id="user-content-cajas-flexibles-diseño-flexible" class="anchor" href="#cajas-flexibles-diseño-flexible" aria-hidden="true"></a>Cajas flexibles: Diseño Flexible</h3>
+<p>Un diseño flexible permite para alterar el ancho y alto de sus
+elementos para ajustarse lo mejor posible al espacio disponible
+en cualquier dispositivo. Un contenedor flexible expande sus
+elementos para rellenar el espacio libre, o los comprime para
+evitar que rebasen el área prevista.</p>
+<ul>
+<li>Un contenedor flexible (Flex container) se define usando los valores flex o inline-flex en la propiedad display del contenedor o elemento “padre” que contiene los elementos flexibles.</li>
+<li>Cada hijo de un contenedor flex se convierte en un elemento flexible (Flex item), que permite cajas a su derecha o izquierda.</li>
+</ul>
+<p><a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS">https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS</a></p>
+
+        </section>
+      
+        <section >
+          <h3><a id="user-content-columns" class="anchor" href="#columns" aria-hidden="true"></a>Columns</h3>
+<pre><code>&lt;style&gt;
+   .content-box {
+    columns: 3 auto;
+}
+&lt;/style&gt;
+&lt;p&gt;Usando Columns&lt;/p&gt;
+  &lt;div class=&quot;content-box&quot;&gt;
+    &lt;div&gt;uno&lt;/div&gt;
+    &lt;div&gt;due&lt;/div&gt;
+    &lt;div&gt;tre&lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+<style>
+   .content-box {
+    columns: 3 auto;
+}
+</style>
+<p>Usando Columns</p>
+  <div class="content-box">
+    <div>uno</div>
+    <div>due</div>
+    <div>tre</div>
+  </div>
+        </section>
+      
+        <section >
+          <p>Ejemplo:
+<a href="https://piruletas.000webhostapp.com/teoria/T2/form0Info.html">https://piruletas.000webhostapp.com/teoria/T2/form0Info.html</a></p>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section>
+      <section >
+        <h1><a id="user-content-12-css-discriminación-por-dispositivos" class="anchor" href="#12-css-discriminación-por-dispositivos" aria-hidden="true"></a>12. CSS: Discriminación por dispositivos</h1>
+<h2><a id="user-content-media-type" class="anchor" href="#media-type" aria-hidden="true"></a>Media-Type</h2>
+<ul>
+<li>
+<p>Permite categorizar los dispositivos de usuario</p>
+</li>
+<li>
+<p>Se usaron originalmente para seleccionar en HTML4 distintos CSS en
+función del dispositivo del usuario.</p>
+</li>
+<li>
+<p>Pero son insuficientes como una manera de discriminar entre dispositivos con
+diferentes</p>
+</li>
+<li>
+<p><em>Media Types</em>:
+all, braille, embossed, handheld, print, projection, screen, speech,
+tty, tv.</p>
+</li>
+</ul>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; 
+href=&quot;st1.css&quot; media=&quot;print&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
+href=&quot;st2.css&quot; media=&quot;screen&quot;&gt;
+</code></pre>
+
+      </section>
+      
+        <section >
+          <h2><a id="user-content-css3-media-queries" class="anchor" href="#css3-media-queries" aria-hidden="true"></a>CSS3: Media queries</h2>
+<ul>
+<li>Las consultas de medios ( media queries )son simples filtros que pueden aplicarse a
+los estilos CSS. Facilitan el cambio de estilos según el tipo de dispositivo
+( media-type ) o las características del dispositivo ( media-feature ), como el tipo
+de pantalla, el ancho, el alto, la orientación e incluso la resolución.</li>
+</ul>
+<pre><code class="language-css">@media screen and (min-width:600px) {
+    nav {
+    float: left;
+    width: 25%;
+    }
+    section {
+    margin-left: 25%;
+}}
+</code></pre>
+<pre><code class="language-css">@media (query) 
+{
+ //CSS Rules used when__query matches 
+}
+</code></pre>
+
+        </section>
+      
+        <section >
+          <h2><a id="user-content-ejemplo-media-queries" class="anchor" href="#ejemplo-media-queries" aria-hidden="true"></a>Ejemplo Media-QuerIes</h2>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; media=&quot;(max-width: 640px)&quot; 
+href=&quot;max-640px.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; media=&quot;(min-width: 640px)&quot; 
+href=&quot;min-640px.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; media=&quot;(orientation: portrait)&quot;
+ href=&quot;portrait.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; media=&quot;(orientation: landscape)&quot;
+ href=&quot;landscape.css&quot;&gt;
+&lt;style&gt;
+  @media (min-width: 500px) and (max-width: 600px) {
+  h1 { color: fuchsia;}
+  .desc:after {
+    content:&quot; In fact, it's between 500px and 600px wide.&quot;;
+  }
+}
+&lt;/style&gt;
+</code></pre>
+
+        </section>
+      
+        <section >
+          <h3><a id="user-content-media-feature" class="anchor" href="#media-feature" aria-hidden="true"></a>Media Feature</h3>
+<ul>
+<li><code>min-width</code> :Reglas aplicadas a cualquier ancho de ventana de
+navegador que supere el valor definido en la consulta.</li>
+<li><code>max-width</code> :Reglas aplicadas a cualquier ancho de ventana de
+navegador que sea inferior al valor definido en la consulta.</li>
+<li><code>min-height</code> : Reglas aplicadas a cualquier alto de ventana de
+navegador que supere el valor definido en la consulta.</li>
+<li><code>max-height</code> : Reglas aplicadas a cualquier alto de ventana de
+navegador que sea inferior al valor definido en la consulta.</li>
+<li><code>orientation=portrait</code> : Reglas aplicadas a cualquier navegador
+cuyo alto de ventana sea superior o igual al ancho.</li>
+<li><code>orientation=landscape</code> : Reglas aplicadas a cualquier navegador
+cuyo ancho sea superior al alto.</li>
+</ul>
+
+        </section>
+      
+    </section>
+  
+
+  
+    <section >
+      <h1><a id="user-content-lecturas-recomendadas" class="anchor" href="#lecturas-recomendadas" aria-hidden="true"></a>Lecturas recomendadas</h1>
+<ul>
+<li>Webgrafía:
+<ul>
+<li>Guía HTML y CSS : <a href="https://developer.mozilla.org/en-US/docs/Web">https://developer.mozilla.org/en-US/docs/Web</a></li>
+<li>Guía referencia HTML <a href="https://html.spec.whatwg.org/multipage/indices.html">https://html.spec.whatwg.org/multipage/indices.html</a></li>
+<li>Guía general CSS: <a href="http://www.w3.org/community/webed/wiki/CSS">http://www.w3.org/community/webed/wiki/CSS</a></li>
+<li>Guia de etiquetes y regles css actives en els navegadors:
+<a href="http://caniuse.com">http://caniuse.com</a></li>
+<li>Guía Accesibilidad:
+<a href="http://w3c.es/Divulgacion/GuiasBreves/Accesibilidad">http://w3c.es/Divulgacion/GuiasBreves/Accesibilidad</a></li>
+</ul>
+</li>
+<li>Bibliografía:
+<ul>
+<li>Head first web design. O’reilly. Ethan Watrall &amp; Jeff
+Siarto.</li>
+<li>HTML5 y CSS3. Editor: ENI (Septiembre 2011) Autor : Luc VAN
+LANCKER ISBN : 978-2-7460-6816-2</li>
+</ul>
+</li>
+</ul>
+
+    </section>
+  
+
+  
+    <section >
+      <h3><a id="user-content-¿dudas" class="anchor" href="#¿dudas" aria-hidden="true"></a>¿Dudas?</h3>
+<p><img src="./media/image8.png" alt="Image de Dudas"></p>
+
+    </section>
+  
+
+
+
+    </div>
+
+  </div>
+
+  <script src="libs/reveal.js/dist/reveal.js"></script>
+
+<script src="libs/reveal.js/plugin/zoom/zoom.js"></script>
+
+<script src="libs/reveal.js/plugin/notes/notes.js"></script>
+<script src="libs/reveal.js/plugin/search/search.js"></script>
+<script src="libs/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="libs/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="libs/reveal.js/plugin/math/math.js"></script>
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+        controls: true,
+        controlsTutorial: true,
+        controlsLayout: 'bottom-right',
+        controlsBackArrows: 'faded',
+        progress: true,
+        slideNumber: true,
+        history: false,
+        keyboard: true,
+        overview: true,
+        center: true,
+        touch: true,
+        loop: false,
+        rtl: false,
+        shuffle: false,
+        fragments: true,
+        fragmentInURL: false,
+        embedded: true,
+        help: true,
+        showNotes: false,
+        autoPlayMedia: false,
+        autoSlide: 0,
+        autoSlideStoppable: true,
+        autoSlideMethod: Reveal.navigateNext,
+        defaultTiming: 120,
+        mouseWheel: true,
+        hideAddressBar: true,
+        previewLinks: true,
+        transition: 'default',
+        transitionSpeed: 'default',
+        backgroundTransition: 'fade',
+        viewDistance: 3,
+        parallaxBackgroundImage: '',
+        parallaxBackgroundSize: '2100px 900px',
+        parallaxBackgroundHorizontal: 10,
+        parallaxBackgroundVertical: 10,
+        display: 'block',
+
+        plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath],
+        
+        math: {
+            mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+            config: 'TeX-AMS_HTML-full',
+            TeX: { Macros: { RR: "{\\bf R}" } }
+        },
+        /*
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            
+            { src: 'libs/reveal.js/3.8.0/plugin/search/search.js', async: true },
+            
+
+            
+            { src: 'libs/reveal.js-plugins/3.8.0/plugin/chalkboard/chalkboard.js' },
+                
+
+            
+            { src: 'libs/reveal.js/3.8.0/plugin/menu/menu.js' },
+            
+
+            
+            { src: 'libs/reveal.js/3.8.0/plugin/title-footer/title-footer.js', async: true, callback: function () { title_footer.initialize(); } },
+            
+            {
+                src: 'libs/highlight.js/9.15.10/reveal-code-focus-1.0.0-mod.js',
+                async: true,
+                callback: function () {
+                    RevealCodeFocus();
+                }
+            },
+            // {src: 'libs/reveal.js/3.8.0/plugin/line-numbers/line-numbers.js'}
+        ],
+        keyboard: {
+            67: function () { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+            66: function () { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+            46: function () { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+            8: function () { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+            68: function () { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+        },
+        chart: {
+            defaults: {
+                global: {
+                    title: { fontColor: "#FFF" },
+                    legend: {
+                        position: "bottom",
+                            labels: { fontColor: "#FFF" },
+                    },
+                    tooltips: {
+                        labels: { fontColor: "#FFF" },
+                    },
+                },
+                scale: {
+                    scaleLabel: { fontColor: "#FFF" },
+                    gridLines: { color: "#FFF", zeroLineColor: "#FFF" },
+                    ticks: { fontColor: "#FFF" },
+                }
+            },
+            line: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"], "borderDash": [[5, 10], [0, 0]] },
+            bar: { backgroundColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+            pie: { backgroundColor: [["rgba(0,0,0,.8)", "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"]] },
+            radar: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+        },
+        anything: [ 
+            {
+                className: "mermaid"
+            },
+            // ...
+        ],
+        menu: {
+            // Specifies which side of the presentation the menu will 
+            // be shown. Use 'left' or 'right'.
+            side: 'left',
+
+                // Specifies the width of the menu.
+                // Can be one of the following:
+                // 'normal', 'wide', 'third', 'half', 'full', or
+                // any valid css length value
+                width: 'normal',
+
+                    // Add slide numbers to the titles in the slide list.
+                    // Use 'true' or format string (same as reveal.js slide numbers)
+                    numbers: false,
+
+                        // Specifies which slide elements will be used for generating
+                        // the slide titles in the menu. The default selects the first
+                        // heading element found in the slide, but you can specify any
+                        // valid css selector and the text from the first matching
+                        // element will be used.
+                        // Note: that a section data-menu-title attribute or an element
+                        // with a menu-title class will take precedence over this option
+                        titleSelector: 'h1, h2, h3, h4, h5, h6',
+
+                            // If slides do not have a matching title, attempt to use the
+                            // start of the text content as the title instead
+                            useTextContentForMissingTitles: false,
+
+                                // Hide slides from the menu that do not have a title.
+                                // Set to 'true' to only list slides with titles.
+                                hideMissingTitles: false,
+
+                                    // Adds markers to the slide titles to indicate the 
+                                    // progress through the presentation. Set to 'false'
+                                    // to hide the markers.
+                                    markers: true,
+
+                                        // Specify custom panels to be included in the menu, by
+                                        // providing an array of objects with 'title', 'icon'
+                                        // properties, and either a 'src' or 'content' property.
+                                        // custom: false,
+                                        custom: [],
+                                            // Specifies the themes that will be available in the themes
+                                            // menu panel. Set to 'true' to show the themes menu panel
+                                            // with the default themes list. Alternatively, provide an
+                                            // array to specify the themes to make available in the
+                                            // themes menu panel, for example...
+                                            // [
+                                            //     { name: 'Black', theme: 'css/theme/black.css' },
+                                            //     { name: 'White', theme: 'css/theme/white.css' },
+                                            //     { name: 'League', theme: 'css/theme/league.css' }
+                                            // ]
+                                            themes: false,
+
+                                                // Specifies the path to the default theme files. If your
+                                                // presentation uses a different path to the standard reveal
+                                                // layout then you need to provide this option, but only
+                                                // when 'themes' is set to 'true'. If you provide your own 
+                                                // list of themes or 'themes' is set to 'false' the 
+                                                // 'themesPath' option is ignored.
+                                                themesPath: 'css/theme/',
+
+                                                    // Specifies if the transitions menu panel will be shown.
+                                                    // Set to 'true' to show the transitions menu panel with
+                                                    // the default transitions list. Alternatively, provide an
+                                                    // array to specify the transitions to make available in
+                                                    // the transitions panel, for example...
+                                                    // ['None', 'Fade', 'Slide']
+                                                    transitions: false,
+
+                                                        // Adds a menu button to the slides to open the menu panel.
+                                                        // Set to 'false' to hide the button.
+                                                        openButton: true,
+
+                                                            // If 'true' allows the slide number in the presentation to
+                                                            // open the menu panel. The reveal.js slideNumber option must 
+                                                            // be displayed for this to take effect
+                                                            openSlideNumber: false,
+
+                                                                // If true allows the user to open and navigate the menu using
+                                                                // the keyboard. Standard keyboard interaction with reveal
+                                                                // will be disabled while the menu is open.
+                                                                keyboard: true,
+
+                                                                    // Normally the menu will close on user actions such as
+                                                                    // selecting a menu item, or clicking the presentation area.
+                                                                    // If 'true', the sticky option will leave the menu open
+                                                                    // until it is explicitly closed, that is, using the close
+                                                                    // button or pressing the ESC or m key (when the keyboard 
+                                                                    // interaction option is enabled).
+                                                                    sticky: false,
+
+                                                                        // If 'true' standard menu items will be automatically opened
+                                                                        // when navigating using the keyboard. Note: this only takes 
+                                                                        // effect when both the 'keyboard' and 'sticky' options are enabled.
+                                                                        autoOpen: true,
+
+                                                                            // If 'true' the menu will not be created until it is explicitly
+                                                                            // requested by calling RevealMenu.init(). Note this will delay
+                                                                            // the creation of all menu panels, including custom panels, and
+                                                                            // the menu button.
+                                                                            delayInit: false,
+
+                                                                                // If 'true' the menu will be shown when the menu is initialised.
+                                                                                openOnInit: false,
+
+                                                                                    // By default the menu will load it's own font-awesome library
+                                                                                    // icons. If your presentation needs to load a different
+                                                                                    // font-awesome library the 'loadIcons' option can be set to false
+                                                                                    // and the menu will not attempt to load the font-awesome library.
+                                                                                    loadIcons: false
+        },
+        chalkboard: {
+            toggleChalkboardButton: { left: "60px", bottom: "30px", top: "auto", right: "auto" },
+            toggleNotesButton: { left: "90px", bottom: "30px", top: "auto", right: "auto" },
+
+        }
+        */
+    });
+
+</script>
+
+
+</body>
+
+</html>
