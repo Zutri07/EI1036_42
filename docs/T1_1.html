@@ -14,15 +14,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/sky.css" id="theme">
-		<link rel="stylesheet" href="plugin/title-footer/title-footer-mod.css" />
-		-->
-		<!-- Theme used for syntax highlighting of code -->
-
-		<link rel="stylesheet" href="libs/highlight.js/9.12.0/Monokai.css">
+      <link rel="stylesheet" href="libs/highlight.js/9.12.0/Monokai.css">
   
 
 		<link rel="stylesheet" href="libs/reveal.js/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -31,19 +23,19 @@
 		<link rel="stylesheet" href="libs/reveal.js/3.8.0/css/theme/sky.css" id="theme">
 		
 		
-		<link rel="stylesheet" href="libs/reveal.js/3.8.0/plugin/title-footer/title-footer-mod.css" />
-	 
-		<!-- MERMAID-->
-		<script src="libs/reveal.js/3.8.0/plugin/mermaid/mermaid.min.js"></script>
-		<style>
-		.mermaid {
-		  font-size: 0.5em;
-		}
-		</style>
+		
 	 
 
 
 	 <link rel="stylesheet" href="lola_theme2.css">
+ 
+
+		</style>
+	
+	 
+
+
+	 <link rel="stylesheet" href="lola_theme0.css">
  
 
 		
@@ -56,12 +48,15 @@
 			<div class="slides">
 
                 <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
-                <section data-markdown="./EI1036_42_T2.md" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$"></section>
+                <section data-markdown="./EI1036_42_T1.md" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$"></section>
 
 
             </div>
 		</div>
-		<script src="libs/reveal.js/3.8.0/lib/js/head.min.js"></script>
+		
+	
+		<script>
+<script src="libs/reveal.js/3.8.0/lib/js/head.min.js"></script>
 		<script src="libs/reveal.js/3.8.0/js/reveal.js"></script>
 	 
 		<script>
@@ -129,7 +124,7 @@
 					 
 	 
 					 
-				{ src: 'libs/reveal.js/3.8.0/plugin/chalkboard/chalkboard.js' },
+				///{ src: 'libs/reveal.js/3.8.0/plugin/chalkboard/chalkboard.js' },
 					 
 	 
 					 
@@ -159,11 +154,7 @@
 				8: function () { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
 				68: function () { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
 		  },
-		  math: {
-			  // mathjax: 'libs/reveal.js/3.8.0/plugin/math/MathJax.js',
-					  mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-					 config: 'TeX-AMS_HTML-full'
-		  },
+		
 		  chart: {
 				defaults: {
 					 global: {
@@ -187,12 +178,6 @@
 				pie: { backgroundColor: [["rgba(0,0,0,.8)", "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"]] },
 				radar: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
 		  },
-		  anything: [ 
-		  {
-			className: "mermaid"
-		  },
-		  // ...
-		 ],
 		  menu: {
 				// Specifies which side of the presentation the menu will 
 				// be shown. Use 'left' or 'right'.
@@ -304,15 +289,15 @@
 																												// font-awesome library the 'loadIcons' option can be set to false
 																												// and the menu will not attempt to load the font-awesome library.
 																												loadIcons: false
-		  },
-		  chalkboard: {
-				toggleChalkboardButton: { left: "60px", bottom: "30px", top: "auto", right: "auto" },
-				toggleNotesButton: { left: "90px", bottom: "30px", top: "auto", right: "auto" },
-	 
 		  }
-		  });
+      });
+		 /// chalkboard: {
+		///		toggleChalkboardButton: { left: "60px", bottom: "30px", top: "auto", right: "auto" },
+	///			toggleNotesButton: { left: "90px", bottom: "30px", top: "auto", right: "auto" },
 	 
+	///	  }
+
 	 
-	 
-	 </script>	</body>
+	 </script>
+	</body>
 </html>
