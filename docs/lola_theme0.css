@@ -17,7 +17,9 @@
    padding: 10px 0; 
 }
 .reveal .progress {
-  height: 35px;
+  height: 10%;
+  text-align: center;
+
 } 
 /**
  *Mis fuentes más pequeñas*/
@@ -42,6 +44,10 @@
  @media print { 
   /* All your print styles go here */
   #header, #footer, #nav { display: none !important; } 
+ }
+ .progress{
+   margin:0px;
+   padding:0px;
  }
  .reveal section  img {max-height: 530px; 
   margin: 0  0  0 0;}
