@@ -73,7 +73,7 @@
    <script src="plugin/markdown/markdown.js"></script>
    <script src="plugin/highlight/highlight.js"></script>
    <script src="plugin/menu/menu.js"></script>
-  
+   <script src="plugin/zoom.zoom.js"></script>
    <script src="dist/reveal.js"></script>
    <script>
 
@@ -81,7 +81,7 @@
 			
 
          // Learn about plugins: https://revealjs.com/plugins/
-         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMenu],
+         plugins: [RevealMarkdown, RevealHighlight, RevealNotes,RevealMenu,RevealZoom],
          menu: {
          // Specifies which side of the presentation the menu will 
          // be shown. Use 'left' or 'right'.
@@ -196,6 +196,7 @@
      },
    });
 </script>
+
 <script>
    //AÑADIR TITULO BARRA PROGRESS
    Reveal.on( 'ready', event => {
