@@ -21,9 +21,9 @@
   text-align: center;
 
 } 
-/**
- *Mis fuentes más pequeñas*/
- .reveal .slide-number {
+
+/*Mis fuentes más pequeñas*/
+ .reveal .slide-number0 {
    right:50%;
    bottom: 60px;
  }
