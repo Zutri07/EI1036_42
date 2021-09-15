@@ -14,7 +14,7 @@
    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/ico" href="./media/favicon.ico">
+   
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/sky.css" id="theme">
@@ -78,7 +78,12 @@
    <script>
 
       Reveal.initialize({
-			
+        controls: true,
+        controlsTutorial: true,
+        controlsLayout: 'bottom-right',
+        controlsBackArrows: 'faded',
+        progress: true,
+        slideNumber: true,
 
          // Learn about plugins: https://revealjs.com/plugins/
          plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMenu],
