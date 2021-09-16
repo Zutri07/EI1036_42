@@ -10,7 +10,7 @@ font: size 1.1em;
  .reveal div.slide-menu-button {
   bottom:0em;
 }
-.reveal .controls {
+.reveal .controls0 {
   line-height: .1em;
   font-size: 0.15em;
   bottom: 0em;
@@ -19,7 +19,7 @@ font: size 1.1em;
 
 /*.reveal .controls .controls-arrow, .controls-arrow:after, .reveal .controls .controls-arrow:before
 */
-.reveal .controls .controls-arrow
+.reveal0 .controls0 .controls-arrow0
 {
 font-size: 0.5em;
 }
