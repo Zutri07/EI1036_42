@@ -1,18 +1,29 @@
 
-
-@media screen and (max-width: 900px), (max-height: 600px) {
-  .reveal .slides {
-      font-size: 0.82em;
-      padding: 10px 0;
-  }
+.reveal {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+.reveal pre{
+  overflow: scroll;
+font: size 1.1em;
+}
+ .reveal div.slide-menu-button {
+  bottom:0em;
+}
+.reveal .controls {
+  line-height: .1em;
+  font-size: 0.15em;
+  bottom: 0em;
+  padding: 5px;
 }
 
-@media screen and (max-width: 700px), (max-height: 400px) {
-  .reveal .slides {
-      font-size: 0.66em;
-      padding: 10px 0;
-  }
-}r
+/*.reveal .controls .controls-arrow, .controls-arrow:after, .reveal .controls .controls-arrow:before
+*/
+.reveal .controls .controls-arrow
+{
+font-size: 0.5em;
+}
+
 .reveal .slides>section, .reveal .slides>section>section {
    padding: 0px 0; 
 }
@@ -22,11 +33,29 @@
 
 } 
 
+.titPres {
+  position:absolute;
+  text-align: center;
+  right:20%;
+  left:20%;
+  padding: 5px;
+  bottom: 0.4em;
+}
+.reveal .slide-number{
+
+background-color: transparent;
+
+right: 18%;
+bottom:0.4em; 
+}
 /*Mis fuentes más pequeñas*/
- .reveal .slide-number0 {
-   right:50%;
-   bottom: 60px;
+ .reveal .slide-number0{
+   text-align: center;
+   right:20%;
+   left:20%;
+   bottom: 3.4em;
  }
+ /*
  element.style{top :10px;}
 
  .reveal #title-footer {
@@ -41,6 +70,7 @@
   padding-top: 0.5vh;
   padding-bottom: 0.5vh;
 }
+*/
  @media print { 
   /* All your print styles go here */
   #header, #footer, #nav { display: none !important; } 
@@ -54,7 +84,7 @@
 .reveal section  img.imagen {max-height: 300px; 
   float:right;
   margin: 0  0  0 0;}
-
+/*
 .reveal {
   font-size: 27px;
   margin: 5px;
@@ -62,6 +92,7 @@
   line-height: 1.3;
   width: auto;
 }
+*/
 .content-box { columns: 2 auto; }
 
 
@@ -91,16 +122,16 @@
 .reveal li{margin-left:5px}
 .reveal table{font-size: 0.5 em;line-height: 0.8em;}
 .reveal .slides > section{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}*/
-.reveal ol,
+/*.reveal ol,
 .reveal dl,
 .reveal ul {
   text-align: left;
   line-height: 1.4;
   display: inherit;
   
-}
+}*/
 /*.reveal pre {width: 100%;}*/
-
+/*
 .reveal pre code{
   font-size: 16px;
   line-height: 1.4;
@@ -130,3 +161,4 @@ a { word-wrap: break-word;}
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+*/

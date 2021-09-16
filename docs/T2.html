@@ -4,39 +4,18 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
    <title>EI1036_42: Teoría T2</title>
    <meta name="author" content="Dolores Maria Llidó Escrivá">
-   <meta name="apple-mobile-web-app-capable" content="yes">
-   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-   <meta name="apple-mobile-web-app-capable" content="yes">
-   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/ico" href="./media/favicon.ico">
+   <link rel="stylesheet" href="dist/reset.css">
+   <link rel="stylesheet" href="dist/reveal.css">
+   <link rel="stylesheet" href="dist/theme/sky.css" id="theme">
 
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/ico" href="./media/favicon.ico">
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/sky.css" id="theme">
-	
-	
-   <!-- Theme used for syntax highlighting of code -->
-
-   <!--link rel="stylesheet" href="libs/highlight.js/9.12.0/Monokai.css"-->
-
-
-   <!--link rel="stylesheet" href="libs/reveal.js/font-awesome-4.7.0/css/font-awesome.min.css"-->
-  <!-- <link rel="stylesheet" href="libs/reveal.js/3.8.0/css/reveal.css">
-
-   <link rel="stylesheet" href="libs/reveal.js/3.8.0/css/theme/sky.css" id="theme">
-
-
-
-
-  -->
-
-
-<link rel="stylesheet" href="lola_theme0.css">
+   <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+   <link rel="stylesheet" href="plugin/menu/menu.css" id="highlight-theme">
+   <!--link rel="stylesheet" href="plugin/menu/reveal.js-menu/bower.json" id="highlight-theme"-->
+   
+   <link rel="stylesheet" href="lola_theme0.css">
 
 
 
@@ -54,21 +33,7 @@
 
       </div>
    </div>
- <!--     dependencies:
-        [
- 
-            {
-                src: 'plugin/title-footer/title-footer.js',
-                async: true,
-                callback: function()
-                {
-                    title_footer.initialize();
-                }
-            }
-        ]
-      });
-       <script src="plugin/title-footer/title-footer.js"></script>
-      -->
+
    <script src="plugin/notes/notes.js"></script>
    <script src="plugin/markdown/markdown.js"></script>
    <script src="plugin/highlight/highlight.js"></script>
@@ -78,43 +43,28 @@
    <script>
 
       Reveal.initialize({
-
-        slideNumber: true,
+         slideNumber: 'c/t' ,
          // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes,RevealMenu,RevealZoom],
+         plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu, RevealZoom],
+
+      });
+   </script>
+   
+   <script>
+      //AÑADIR TITULO BARRA PROGRESS
+      Reveal.on('ready', event => {
+         var titPres= document.createElement('aside')
+         titPres.appendChild(document.createTextNode(document.title))
+         titPres.className="titPres"
          
-   });
-</script>
-
-<script>
-   //AÑADIR TITULO BARRA PROGRESS
-Reveal.on( 'ready', event => {
-  // event.currentSlide, event.indexh, event.indexv
-// var title_footer_p = document.createElement('span')
-var span_element = document.createElement('span')
-  //te('href', '#/0')
-  span_element.appendChild(document.createTextNode(document.title))
-  //title_footer_p.appendChild(a_element)
-  var child = document.querySelectorAll('div.progress span')[0]
-  //var parent = child.parentNode
-
-  //parent.insertBefore(a_element,child)
-  child.appendChild(span_element)
-
-  var texto = document.querySelectorAll('h1')[0].textContent
-
-
-  var parentN = document.querySelector('div.progress')
-  
-
-
-  parentN.insertBefore(document.createTextNode(texto),parentN.firstChild)
-  
-} ); 
+         //var parentN = document.querySelector('div.slide-number')
+         //parentN.insertBefore(document.createTextNode(document.title), parentN.firstChild)
+         document.body.appendChild(titPres)
+      });
 
 
    </script>
-  
+
 </body>
 
 </html>
