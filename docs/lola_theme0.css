@@ -5,7 +5,7 @@
 }
 .reveal pre{
   overflow: scroll;
-font: size 1.1em;
+font-size: 1em;
 }
  .reveal div.slide-menu-button {
   bottom:0em;
