@@ -11,12 +11,12 @@ font: size 1.1em;
   bottom:0em;
 }
 .reveal .controls0 {
-  line-height: .1em;
-  font-size: 0.15em;
+ 
   bottom: 0em;
   padding: 5px;
 }
-
+/* line-height: .1em;
+  font-size: 0.15em;*/
 /*.reveal .controls .controls-arrow, .controls-arrow:after, .reveal .controls .controls-arrow:before
 */
 .reveal0 .controls0 .controls-arrow0
