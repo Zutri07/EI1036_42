@@ -1,4 +1,4 @@
-reveal .progress span {
+.reveal .progress span {
   margin-top: 1.5em;
   height: 50%;
 }
