@@ -1,7 +1,7 @@
 reveal .progress span {
   margin-top: 1.5em;
   height: 50%;
-  
+
 .reveal {
   font-size: 1.5em;
   line-height: 1.3em;
@@ -13,10 +13,9 @@ font-size: 1em;
  .reveal div.slide-menu-button {
   bottom:0em;
 }
-.reveal .controls0 {
+.reveal .controls {
  
-  bottom: 0em;
-  padding: 5px;
+  bottom: 5em;
 }
 /* line-height: .1em;
   font-size: 0.15em;*/
