@@ -9,6 +9,10 @@
 .reveal pre{
   overflow: scroll;
 font-size: 0.9em;
+width: 96%;
+}
+.enlace{
+  font-size: 0.8em; 
 }
  .reveal div.slide-menu-button {
   bottom:0em;
