@@ -7,7 +7,7 @@
   line-height: 1.3em;
 }
 .reveal pre{
-  overflow: scroll;
+  /*overflow: scroll;*/
 font-size: 0.9em;
 width: 96%;
 }
